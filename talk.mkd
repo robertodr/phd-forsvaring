@@ -2,9 +2,9 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-.title[Polarizable Continuum Model]
+.title[The Polarizable Continuum Model Goes Viral!]
 
-.subtitle[From Theory to Implementation using PCMSolver]
+.subtitle[Extensible, Modular and Sustainable Development of Quantum Mechanical Continuum Solvation Models]
 
 .author[Roberto Di Remigio]
 
@@ -21,6 +21,63 @@ This talk is an introduction to continuum solvation models and in particular to
 the polarizable continuum model (PCM)
 I will introduce the basic features of the model and talk about our
 implementation as an independent library
+
+---
+layout: false
+
+.left-column[
+ ### Introduction
+
+- Viral?
+
+]
+.right-column[
+### Software is integral to quantum chemistry
+<p style="text-align:center;"><img src="images/viral.png" style="width: 100%"></p>
+<p style="clear: both;">
+]
+
+---
+layout: false
+
+.left-column[
+ ### Introduction
+
+- Viral?
+- Extensible
+
+]
+.right-column[
+]
+
+---
+layout: false
+
+.left-column[
+ ### Introduction
+
+- Viral?
+- Extensible
+- Modular
+
+]
+.right-column[
+]
+
+---
+layout: false
+
+.left-column[
+ ### Introduction
+
+- Viral?
+- Extensible
+- Modular
+- Sustainable
+
+]
+.right-column[
+]
 
 ---
 layout: false
