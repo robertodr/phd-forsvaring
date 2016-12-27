@@ -6,14 +6,14 @@ class: center, middle, inverse
 
 .subtitle[From Theory to Implementation using PCMSolver]
 
-.author[Roberto Di Remigio, ] .coauthor[Luca Frediani]
+.author[Roberto Di Remigio]
 
 .institution[UiT -- The Arctic University of Norway]
 
-.date[10 October 2016, Wuhan]
+.date[16 January 2017, Tromsø]
 
 .footnote[[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
-Browse slides at [http://tinyurl.com/hzh8djv](http://tinyurl.com/hzh8djv)]
+Browse slides at [http://tinyurl.com/phd-forsvaring](http://tinyurl.com/phd-forsvaring)]
 
 ???
 
@@ -48,7 +48,7 @@ layout: false
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 
 ## Quantum Chemistry
 ### **Understand** and **predict** chemistry from first principles
@@ -90,7 +90,7 @@ $$`
 
 ---
 layout: false
-class: split-50
+class: split-50-50
 ## The Problem of Solvation
 
 .column[
@@ -154,7 +154,7 @@ Problems
 
 ---
 layout: false
-class: split-50
+class: split-50-50
 ## Multiscale models.red[<sup>1</sup>]
 
 - Use **quantum** and **classical** physics together:
@@ -179,7 +179,7 @@ class: split-50
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 ## QM/MM.red[<sup>2</sup>]
 
 - Use **quantum** and **classical** physics together:
@@ -211,7 +211,7 @@ class: split-60
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 
 ## QM/Continuum.red[<sup>2</sup>]
 
@@ -237,7 +237,7 @@ class: split-60
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 
 ## Best of both worlds: QM/MM/Continuum.red[<sup>3</sup>]
 
@@ -264,7 +264,7 @@ class: split-60
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 
 ## QM/Continuum: the polarizable continuum model.red[<sup>2</sup>]
 
@@ -431,7 +431,7 @@ $$`
 
 ---
 layout: false
-class: split-70
+class: split-70-30
 
 ## Boundary element method and PCM.red[<sup>6</sup>]
 
@@ -459,7 +459,7 @@ $$`
 
 ---
 layout: false
-class: split-60
+class: split-60-40
 
 ## Self-Consistent Field with PCM.red[<sup>2</sup>]
 
@@ -725,7 +725,7 @@ energy = pcmsolver_compute_polarization_energy(pcm_context, mep_lbl, asc_lbl)
 
 ---
 layout: false
-class: split-50
+class: split-50-50
 
 ## Solvation in the Relativistic Regime.red[<sup>*</sup>]
 
@@ -773,7 +773,7 @@ $$`
 
 ---
 layout: false
-class: split-50
+class: split-50-50
 
 ## Spherical Diffuse Interfaces.red[<sup>*</sup>]
 
@@ -793,7 +793,7 @@ class: split-50
 
 ---
 layout: false
-class: split-50
+class: split-50-50
 
 ## Spherical Diffuse Interfaces.red[<sup>*</sup>]
 
@@ -828,9 +828,9 @@ template: inverse
 
 Slideshow created using [remark] and served using [cicero]
 
-Slides available on [GitHub](https://github.com/robertodr/talk-hzau)
+Slides available on [GitHub](https://github.com/robertodr/phd-forsvaring)
 
-Browse slides at [http://tinyurl.com/hzh8djv](http://tinyurl.com/hzh8djv)
+Browse slides at [http://tinyurl.com/phd-forsvaring](http://tinyurl.com/phd-forsvaring)]
 
 [remark]: https://github.com/gnab/remark
 [cicero]: https://github.com/bast/cicero
