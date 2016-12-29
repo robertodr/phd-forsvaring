@@ -33,7 +33,7 @@ layout: false
 ]
 .right-column[
 ### Software is integral to quantum chemistry
-<p style="text-align:center;"><img src="images/viral.png" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/viral.svg" style="width: 100%"></p>
 <p style="clear: both;">
 ]
 
@@ -82,24 +82,10 @@ layout: false
 ---
 layout: false
 
-.left-column[
-  ## Outline
-]
-.right-column[
+## March of the Solvation Robots
 
-- The problem of solvation
-
-- Polarizable continuum model
-
-- PCM and quantum mechanics
-
-- Modular code development
-
-- PCMSolver
-
-- Using PCMSolver
-
-]
+<p style="text-align:center;"><img src="images/mind-map.svg" style="width: 100%"></p>
+<p style="clear: both;">
 
 ???
 

@@ -1,0 +1,10 @@
+
+The outline "March of the Solvation Robots" should be structured around a mindmap
+where PCMSolver and the variational formulation are at the center.
+
+The slide on solvation models should first outline similarities and then differences between
+implicit and explicit models. Everything should be anchored to a picture.
+
+1. "You see what happens when you find a stranger in the alps?"
+
+2. "Who cares?"
