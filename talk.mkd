@@ -2,9 +2,9 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-.subtitle[The Polarizable Continuum Model Goes Viral!]
+## The Polarizable Continuum Model Goes Viral!
 
-### Extensible, Modular and Sustainable Development of Quantum Mechanical Continuum Solvation Models
+.subtitle[Extensible, Modular and Sustainable Development of Quantum Mechanical Continuum Solvation Models]
 
 .author[Roberto Di Remigio]
 
