@@ -2,9 +2,9 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-.title[The Polarizable Continuum Model Goes Viral!]
+.subtitle[The Polarizable Continuum Model Goes Viral!]
 
-.subtitle[Extensible, Modular and Sustainable Development of Quantum Mechanical Continuum Solvation Models]
+### Extensible, Modular and Sustainable Development of Quantum Mechanical Continuum Solvation Models
 
 .author[Roberto Di Remigio]
 
@@ -25,78 +25,15 @@ implementation as an independent library
 ---
 layout: false
 
-.left-column[
- ### Introduction
+## Quantum Chemistry
 
-- Viral?
+### **Understand** and **predict** chemistry from first principles
 
-]
-.right-column[
-### Software is integral to quantum chemistry
-<p style="text-align:center;"><img src="images/viral.svg" style="width: 100%"></p>
-<p style="clear: both;">
-]
-
----
-layout: false
-
-.left-column[
- ### Introduction
-
-- Viral?
-- Extensible
-
-]
-.right-column[
-]
-
----
-layout: false
-
-.left-column[
- ### Introduction
-
-- Viral?
-- Extensible
-- Modular
-
-]
-.right-column[
-]
-
----
-layout: false
-
-.left-column[
- ### Introduction
-
-- Viral?
-- Extensible
-- Modular
-- Sustainable
-
-]
-.right-column[
-]
-
----
-layout: false
-
-## March of the Solvation Robots
-
-<p style="text-align:center;"><img src="images/mind-map.svg" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/model-chem.svg" style="width: 80%"></p>
 <p style="clear: both;">
 
 ???
 
----
-layout: false
-class: split-60-40
-
-## Quantum Chemistry
-### **Understand** and **predict** chemistry from first principles
-
-.column[
 - Quantum many-body theory applied to chemistry
 
 `$$
@@ -104,32 +41,6 @@ H\Psi = E\Psi
 $$`
 
 - Compute molecular energies and properties
-<p style="text-align:center;"><img src="images/pcm_openrsp.svg" style="width: 80%"></p>
-<p style="clear: both;">
-
-]
-.column[
-<p style="text-align:center;"><img src="images/model-chem.svg" style="width: 40%"></p>
-<p style="clear: both;">
-
-<font color="red">
-<center>Approximations needed!!!</center>
-</font>
-<p style="clear: both;">
-]
-
-???
-
-- Quantum chemistry is the use of physical and mathematical models based on
-  quantum many-body theory to the chemical systems.
-- We want to solve the Schrödinger equation for a many-electron system in the
-  Born--Oppenheimer approximation.
-- Knowledge of the wave function enables calculation of molecular energies and
-  properties. Most properties we have in mind are experimentally accessible by
-  spectroscopic methods: excitation energies, transition moments, vibrational
-  frequencies and so on
-- Due to the large size of the systems we are normally interested in, we need
-  approximations. Hartree--Fock, Density Functional Theory and so on.
 
 ---
 layout: false
@@ -194,6 +105,100 @@ Problems
 <center>Once again, approximations needed!!!</center>
 </font>
 <p style="clear: both;">
+
+---
+layout: false
+
+## Viral!
+### Software Development Is Essential to Quantum Chemistry
+<p style="text-align:center;"><img src="images/viral.svg" style="width: 80%"></p>
+<p style="clear: both;">
+
+- Fast development
+- Reproducibility.red[<sup>1</sup>]
+
+.footnote[.red[<sup>1</sup>] Hatton, L. & Warr, G. arXiv [q-bio.QM] (2016).]
+
+???
+
+- Software development in essential to quantum chemistry.
+- New modelling challenges require new (or improved) methods and new (or
+  improved) software implementations.
+- Software architecture must allow fast development of new methods. We want to
+  solve physical problems, not software engineering problems.
+- The central tenet of the scientific method is reproducibility. Our work is
+  based on models and their computer simulation, these must be reproducible
+  too.
+
+---
+layout: false
+
+## Extensible
+### New Challenges - New Methods - New Software?
+
+<p style="text-align:center;"><img src="images/yoda-future.gif" style="width: 100%;"/></p>
+<p style="clear: both;">
+
+- Avoid reinventing the wheel
+- Extensible software architectures
+
+---
+layout: false
+
+## Modular
+### Do One Thing and Do It Well
+<p style="text-align:center;"><img src="images/LEGO.jpg" style="width: 40%"></p>
+<p style="clear: both;">
+
+- Delimit capabilities, concerns, results
+- LEGO-like software
+
+???
+
+- Fast-paced development cycles can only occur within a clear software structure
+- Modularity can help create such a structure
+- A LEGO-like structure can enhance our capabilities to reason about complex software workflows.
+- Assemble, de-assemble, re-assemble is easier with standalone modules.
+
+---
+layout: false
+
+## Sustainable
+### Software Reuse for a Better Life
+
+-
+
+???
+
+- Reinventing the wheel is bad
+- Build small, well-documented software components
+- Reuse components in different contexts
+
+---
+layout: false
+
+## March of the Solvation Robots
+
+<p style="text-align:center;"><img src="images/mind-map.svg" style="width: 100%"></p>
+<p style="clear: both;">
+
+???
+
+In the thesis we have based the treatment of solvent effects in quantum chemistry
+on two "pillars":
+1. A variational formulation of quantum/classical polarizable Hamiltonians
+2. A modular implementation of the PCM
+
+Based on these two pillars, we have achieved:
+1. The coupling of continuum solvation with 4-component relativistic SCF
+   methods for the computation of energies and selected magnetic properties.
+2. Numerically more robust solvers with higher accuracy for the solution of the
+   PCM electrostatic problem.
+3. An extension of the range of applicability of the PCM to complex
+   environments, characterized by a position-dependent permittivity.
+4. An open-ended formulation of molecular response properties at the SCF level
+   of theory.
+5. A unifying view of the MBPT and CC models when including solvent effects.
 
 ---
 layout: false
