@@ -678,7 +678,7 @@ class: split-50-50
 - KOALA
 ]
 .column[
-<p style="text-align:center;"><img src="images/ring.gif" style="width: 40%"></p>
+<p style="text-align:center;"><img src="images/boromir-ring.gif" style="width: 50%"></p>
 <p style="clear: both;">
 ]
 
@@ -796,6 +796,27 @@ class: center, middle, inverse
 
 ---
 layout: false
+
+## PCM Beyond SCF: MBPT and Coupled Cluster
+
+- CC _effective_ Lagrangian
+-
+
+<p style="text-align:center;"><img src="images/barking-wrong-tree.gif" style="width: 60%"></p>
+<p style="clear: both;">
+
+???
+
+- Attacking the methodology axis
+- Separation of reference and correlation reaction fields
+- CC equations
+- Solution strategies: I need a flow chart for this!
+- Approximate quantum/classical coupling schemes
+- MBPT expansion: 2n+1 and 2n+2 rules
+- Approximate CC methods
+
+---
+layout: false
 class: split-50-50
 
 ## Solvation in the Relativistic Regime.red[<sup>*</sup>]
@@ -819,28 +840,9 @@ $$`
 
 .footnote[.red[<sup>*</sup>] R. Di Remigio, R. Bast, L. Frediani, T. Saue, _J. Phys. Chem. A_, __119__, 5061, (2015)]
 
----
-
-## Using Wavelets for the PCM.red[<sup>*</sup>]
-
-.footnote[.red[<sup>*</sup>] M. Bugeanu, R. Di Remigio, K. Mozgawa, S. S. Reine, H. Harbrecht, L. Frediani, _PCCP_, __17__, 31566, (2015)]
-
-- Sparse representation <img src="images/smiley.svg" style="width: 4%">
-- Linear memory and time cost <img src="images/smiley.svg" style="width: 4%">
-- Huge number of surface points <img src="images/scream.svg" style="width: 4%">
-
---
-
-<div class="imageWrapper">
-  <img class="overlayImage" src="images/a_2_l_0_5_fs.png" style="width: 90%" align="middle">
---
-  <img class="overlayImage" src="images/alpha_convergence.png" style="width: 75%" align="middle">
-</div>
-<p style="clear: both;">
-
 ???
 
-- Use wavelet Galerkin BEM for PCM
+Attacking the Hamiltonian axis
 
 ---
 layout: false
@@ -881,6 +883,37 @@ class: split-50-50
 <p style="text-align:center;"><img src="images/dipole-acetone-perp-water_vapor-curvature.jpg" style="width: 45%"></p>
 <p style="clear: both;">
 ]
+
+---
+
+## Using Wavelets for the PCM.red[<sup>*</sup>]
+
+.footnote[.red[<sup>*</sup>] M. Bugeanu, R. Di Remigio, K. Mozgawa, S. S. Reine, H. Harbrecht, L. Frediani, _PCCP_, __17__, 31566, (2015)]
+
+- Sparse representation <img src="images/smiley.svg" style="width: 4%">
+- Linear memory and time cost <img src="images/smiley.svg" style="width: 4%">
+- Huge number of surface points <img src="images/scream.svg" style="width: 4%">
+
+--
+
+<div class="imageWrapper">
+  <img class="overlayImage" src="images/a_2_l_0_5_fs.png" style="width: 90%" align="middle">
+--
+  <img class="overlayImage" src="images/alpha_convergence.png" style="width: 75%" align="middle">
+</div>
+<p style="clear: both;">
+
+???
+
+- Use wavelet Galerkin BEM for PCM
+
+---
+layout: false
+
+## Molecular Response Properties
+
+<p style="text-align:center;"><img src="images/pcm_openrsp.svg" style="width: 80%"></p>
+<p style="clear: both;">
 
 ---
 
