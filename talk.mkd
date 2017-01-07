@@ -1354,11 +1354,14 @@ template: inverse
 
 ## Thanks for your attention!
 
+<p style="text-align:center;"><img src="images/shoot.gif" style="width: 50%"></p>
+<p style="clear: both;">
+
 Slideshow created using [remark] and served using [cicero]
 
 Slides available on [GitHub](https://github.com/robertodr/phd-forsvaring)
 
-Browse slides at [http://tinyurl.com/phd-forsvaring](http://tinyurl.com/phd-forsvaring)]
+Browse slides at [http://tinyurl.com/phd-forsvaring](http://tinyurl.com/phd-forsvaring)
 
 [remark]: https://github.com/gnab/remark
 [cicero]: https://github.com/bast/cicero
