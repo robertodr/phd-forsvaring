@@ -774,17 +774,51 @@ layout: false
 
 ## PCM Beyond SCF: MBPT and Coupled Cluster
 
-- CC _effective_ Lagrangian
--
-
-<p style="text-align:center;"><img src="images/barking-wrong-tree.gif" style="width: 60%"></p>
-<p style="clear: both;">
+- PCM-CC _effective_ Lagrangian
+`
+$$
+\mathcal{L}_\mathrm{eff}(t, \bar{t}, \mathbf{p})_\mathcal{M} =
+\langle\mathrm{HF} | \overline{H} | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\bar{t}_{u} | \overline{H} | \mathrm{HF}\rangle
+  +U_\mathrm{pol}^\mathrm{ref}
++\frac{1}{2}{}^t\mathrm{p}\mathbb{V}\mathrm{p} +
+{}^t\mathrm{p}\mathrm{s}_{\mathrm{N}}(t,\bar{t})_\mathcal{M}
+$$
+`
+- PCM-CC equations
+`
+$$
+\begin{align}
+ &\epsilon_{\mu_q}\color{blue}{t_{\mu_q}} +\langle\mu_q | \overline{\Phi} | \mathrm{HF}\rangle
+ +{}^t\color{red}{\mathrm{p}}\langle\mu_q | \overline{\mathrm{s}} | \mathrm{HF}\rangle = 0 \\
+ &\epsilon_{\mu_q}\color{green}{\bar{t}_{\mu_q}}
+  +\langle\mathrm{HF} | [\overline{\Phi}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\overline{\Phi}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
+  &+{}^t\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [[\mathrm{s}, T], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
+  &\mathbb{V}\color{red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{blue}{t}, \color{green}{\bar{t}})_\mathcal{M} = 0
+\end{align}
+$$
+`
 
 ???
 
 - Attacking the methodology axis
 - Separation of reference and correlation reaction fields
 - CC equations
+- Everything is coupled
+
+---
+layout: false
+
+## PCM Beyond SCF: MBPT and Coupled Cluster
+
+<p style="text-align:center;"><img src="images/barking-wrong-tree.gif" style="width: 80%"></p>
+<p style="clear: both;">
+
+???
+
 - Solution strategies: I need a flow chart for this!
 - Approximate quantum/classical coupling schemes
 - MBPT expansion: 2n+1 and 2n+2 rules
