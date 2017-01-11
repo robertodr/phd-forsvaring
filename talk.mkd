@@ -131,7 +131,7 @@ layout: false
 
 ## Modular
 ### Do One Thing, Do It Well
-<p style="text-align:center;"><img src="images/lego.gif" style="width: 80%"></p>
+<p style="text-align:center;"><img src="images/lego.gif" style="width: 70%"></p>
 <p style="clear: both;">
 
 - Delimit capabilities, concerns, results
