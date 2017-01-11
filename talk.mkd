@@ -56,18 +56,8 @@ Aspects computational models need to capture
 - Average nature of observables
 - Variety of interactions
 
-<p style="text-align:center;"><img src="images/solvation-dynamics.gif" style="width: 45%"></p>
+<p style="text-align:center;"><img src="images/solvation-dynamics.gif" style="width: 70%"></p>
 <p style="clear: both;">
-
-**Balanced description** needed to reproduce/predict experiments!
-
-<font color="red">
-Problems
-</font>
-<p style="clear: both;">
-
-- Size \\(\Leftrightarrow\\) accurate _ab initio_ not possible
-- Conformations \\(\Leftrightarrow\\) statistical sampling
 
 ???
 
@@ -88,6 +78,15 @@ Problems
     peculiar solute-solvent pair interactions that cannot be fully described
     under any of the previous labels. In general, modelling such effects
     demands an atomistic level of detail.
+
+<font color="red">
+Problems
+</font>
+<p style="clear: both;">
+
+- Size \\(\Leftrightarrow\\) accurate _ab initio_ not possible
+- Conformations \\(\Leftrightarrow\\) statistical sampling
+
 - Size is a huge problem. It is simply not possible to model large systems very
   accurately.
 - Moreover, the conformational space is very large and needs to be sampled
@@ -1151,29 +1150,38 @@ layout: false
 ## Molecular Response Properties
 
 <div class="imageWrapper">
-`$$
-\mathbf{F} = \begin{pmatrix}
-\mathbf{F}^{LL, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{LS, \mathrm{vac}} \\
-\mathbf{F}^{SL, \mathrm{vac}} & \mathbf{F}^{SS, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{SS}
-\end{pmatrix}
-$$`
-
+  <img class="overlayImage" src="images/pcm_openrsp.svg" style="width: 90%" align="middle">
 --
   <img class="overlayImage" src="images/paper-v.png" style="width: 90%" align="middle">
 </div>
 
+---
+layout: false
+class: split-50-50
 
-<p style="text-align:center;"><img src="images/pcm_openrsp.svg" style="width: 80%"></p>
+## Molecular Response Properties
+
+- The variational formulation lets us transparently extend the _in vacuo_ formulation
+- Results as in the poster
+.column[
+<p style="text-align:center;"><img src="images/PDNB_energy.svg" style="width: 100%"></p>
 <p style="clear: both;">
+]
+.column[
+<p style="text-align:center;"><img src="images/PDNB_MPA.svg" style="width: 100%"></p>
+<p style="clear: both;">
+]
 
 ---
 layout: false
 class: center, middle, inverse
 
-# Conclusions
+# Finale
 
 ---
 layout: false
+
+## Conclusions and Perspectives
 
 .left-column[
 ### Variational Formulation
@@ -1186,6 +1194,8 @@ layout: false
 
 ---
 layout: false
+
+## Conclusions and Perspectives
 
 .left-column[
 ### Variational Formulation
