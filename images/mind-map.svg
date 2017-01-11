@@ -15,7 +15,10 @@
    id="svg4152"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="mind-map.svg">
+   sodipodi:docname="mind-map.svg"
+   inkscape:export-filename="/home/roberto/Documents/Presentations/phd-forsvaring/images/mind-map.png"
+   inkscape:export-xdpi="199"
+   inkscape:export-ydpi="199">
   <defs
      id="defs4154" />
   <sodipodi:namedview
@@ -25,14 +28,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.07"
-     inkscape:cx="515.35222"
-     inkscape:cy="399.05688"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="1.1"
+     inkscape:cx="479.98363"
+     inkscape:cy="359.86731"
+     inkscape:current-layer="layer6"
      id="namedview4156"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-width="2560"
+     inkscape:window-height="1376"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -50,7 +53,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="shapes"
+     inkscape:label="above-beyond"
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline">
@@ -113,30 +116,6 @@
        sodipodi:end="0.062629918"
        d="m 293.01499,111.7726 a 54.273949,28.010321 0 0 1 -57.57251,26.19595 54.273949,28.010321 0 0 1 -50.76146,-29.71128 54.273949,28.010321 0 0 1 57.56704,-26.199151 54.273949,28.010321 0 0 1 50.76767,29.708451 l -54.16754,-1.75314 z"
        transform="matrix(0.96186299,0.27353169,-0.34102147,0.94005551,0,0)" />
-    <path
-       style="display:inline;opacity:0.95;fill:#a1d99b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path4701"
-       sodipodi:type="arc"
-       sodipodi:cx="75.951225"
-       sodipodi:cy="135.04718"
-       sodipodi:rx="45.986122"
-       sodipodi:ry="29.682919"
-       sodipodi:start="0.062845641"
-       sodipodi:end="0.062629918"
-       d="m 121.84656,136.91139 a 45.986122,29.682919 0 0 1 -48.780985,27.76021 45.986122,29.682919 0 0 1 -43.01,-31.48544 45.986122,29.682919 0 0 1 48.77635,-27.7636 45.986122,29.682919 0 0 1 43.015265,31.48244 l -45.895965,-1.85782 z"
-       transform="matrix(0.97646605,-0.21567118,0.24717015,0.96897209,0,0)" />
-    <path
-       style="display:inline;opacity:0.95;fill:#31a354;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path4701-3"
-       sodipodi:type="arc"
-       sodipodi:cx="208.92162"
-       sodipodi:cy="22.989975"
-       sodipodi:rx="38.732346"
-       sodipodi:ry="32.80891"
-       sodipodi:start="0.062845641"
-       sodipodi:end="0.062629918"
-       d="m 247.5775,25.050515 a 38.732346,32.80891 0 0 1 -41.08636,30.683712 38.732346,32.80891 0 0 1 -36.22567,-34.80126 38.732346,32.80891 0 0 1 41.08245,-30.687466 38.732346,32.80891 0 0 1 36.2301,34.79795 l -38.6564,-2.053476 z"
-       transform="matrix(0.90564733,0.42403174,-0.33257783,0.94307581,0,0)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12.63991928px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -144,7 +123,7 @@
        y="159.21634"
        id="text4192-4-3"
        sodipodi:linespacing="125%"
-       transform="scale(0.972053,1.0287505)"><tspan
+       transform="scale(0.97205301,1.0287505)"><tspan
          sodipodi:role="line"
          id="tspan4194-7-8"
          x="162.33052"
@@ -178,6 +157,115 @@
          y="59.794525"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
          id="tspan4226-6">      Chemistry</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="222.13062"
+       y="98.060791"
+       id="text4192-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194-2"
+         x="222.13062"
+         y="98.060791"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Wavelet</tspan><tspan
+         sodipodi:role="line"
+         x="222.13062"
+         y="112.17191"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4222">  Galerkin</tspan><tspan
+         sodipodi:role="line"
+         x="222.13062"
+         y="126.28301"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4224">     BEM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="30.377762"
+       y="158.98914"
+       id="text4192-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194-7"
+         x="30.377762"
+         y="158.98914"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Response</tspan><tspan
+         sodipodi:role="line"
+         x="30.377762"
+         y="173.10025"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4226">    Theory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="19.056589"
+       y="86.297089"
+       id="text4192-4-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="19.056589"
+         y="86.297089"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4226-3">MBPT and CC</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="foundations">
+    <path
+       style="display:inline;opacity:0.95;fill:#a1d99b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path4701"
+       sodipodi:type="arc"
+       sodipodi:cx="75.951225"
+       sodipodi:cy="135.04718"
+       sodipodi:rx="45.986122"
+       sodipodi:ry="29.682919"
+       sodipodi:start="0.062845641"
+       sodipodi:end="0.062629918"
+       d="m 121.84656,136.91139 a 45.986122,29.682919 0 0 1 -48.780985,27.76021 45.986122,29.682919 0 0 1 -43.01,-31.48544 45.986122,29.682919 0 0 1 48.77635,-27.7636 45.986122,29.682919 0 0 1 43.015265,31.48244 l -45.895965,-1.85782 z"
+       transform="matrix(0.97646606,-0.21567118,0.24717015,0.9689721,0,0)" />
+    <path
+       style="display:inline;opacity:0.95;fill:#31a354;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path4701-3"
+       sodipodi:type="arc"
+       sodipodi:cx="208.92162"
+       sodipodi:cy="22.989975"
+       sodipodi:rx="38.732346"
+       sodipodi:ry="32.80891"
+       sodipodi:start="0.062845641"
+       sodipodi:end="0.062629918"
+       d="m 247.5775,25.050515 a 38.732346,32.80891 0 0 1 -41.08636,30.683712 38.732346,32.80891 0 0 1 -36.22567,-34.80126 38.732346,32.80891 0 0 1 41.08245,-30.687466 38.732346,32.80891 0 0 1 36.2301,34.79795 l -38.6564,-2.053476 z"
+       transform="matrix(0.90564733,0.42403175,-0.33257784,0.94307582,0,0)" />
+    <text
+       xml:space="preserve"
+       style="display:inline;font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="151.13396"
+       y="113.99168"
+       id="text4192"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194"
+         x="151.13396"
+         y="113.99168"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">PCMSolver</tspan></text>
+    <text
+       xml:space="preserve"
+       style="display:inline;font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.434578"
+       y="112.14548"
+       id="text4192-4-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194-7-5"
+         x="69.434578"
+         y="112.14548"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Variational</tspan><tspan
+         sodipodi:role="line"
+         x="69.434578"
+         y="126.25659"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4226-7">   Formulation</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -274,91 +362,5 @@
        id="path6681"
        d="m 154.02372,129.49759 c 0,0 2.91397,3.52475 4.66303,4.97701 1.85194,1.53769 6.08761,3.88437 6.08761,3.88437 0,0 -4.51505,0.57782 -6.72992,1.08547 -1.70432,0.39063 -3.40916,0.83649 -5.02545,1.50351 -2.41744,0.99764 -4.7504,2.23877 -6.91472,3.70675 -1.4876,1.00898 -2.98738,2.08163 -4.12478,3.4735 -1.72125,2.10635 -3.26776,4.52027 -3.9077,7.16411 -0.6982,2.88454 -0.45282,6.00962 0.2171,8.90085 0.54739,2.36241 1.6853,4.59793 3.03931,6.60971 1.3383,1.98844 4.9214,5.24255 4.9214,5.24255"
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#99d8c9;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.60000001, 1.60000001;stroke-dashoffset:0;stroke-opacity:1" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer3"
-     inkscape:label="captions"
-     style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="151.13396"
-       y="113.99168"
-       id="text4192"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4194"
-         x="151.13396"
-         y="113.99168"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">PCMSolver</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="222.13062"
-       y="98.060791"
-       id="text4192-0"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4194-2"
-         x="222.13062"
-         y="98.060791"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Wavelet</tspan><tspan
-         sodipodi:role="line"
-         x="222.13062"
-         y="112.17191"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4222">  Galerkin</tspan><tspan
-         sodipodi:role="line"
-         x="222.13062"
-         y="126.28301"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4224">     BEM</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="30.377762"
-       y="158.98914"
-       id="text4192-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4194-7"
-         x="30.377762"
-         y="158.98914"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Response</tspan><tspan
-         sodipodi:role="line"
-         x="30.377762"
-         y="173.10025"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4226">    Theory</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="69.434578"
-       y="112.14548"
-       id="text4192-4-6"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4194-7-5"
-         x="69.434578"
-         y="112.14548"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'">Variational</tspan><tspan
-         sodipodi:role="line"
-         x="69.434578"
-         y="126.25659"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4226-7">   Formulation</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="19.056589"
-       y="86.297089"
-       id="text4192-4-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="19.056589"
-         y="86.297089"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4226-3">MBPT and CC</tspan></text>
   </g>
 </svg>

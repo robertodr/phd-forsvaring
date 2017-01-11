@@ -48,29 +48,18 @@ $$`
 
 ---
 layout: false
-class: split-50-50
+
 ## The Problem of Solvation
 
-.column[
-<font color="red">
-Solvent effects
-</font>
-<p style="clear: both;">
-- Direct
-- Indirect
-- Local field
-- Dynamic
-- Specific
+Aspects computational models need to capture
+- Dynamical features of solvation
+- Average nature of observables
+- Variety of interactions
 
-Free energy:
-  `$$ G = G_\mathrm{el} + G_\mathrm{dis} + G_\mathrm{rep} + G_\mathrm{Mm}(T) $$`
+<p style="text-align:center;"><img src="images/solvation-dynamics.gif" style="width: 45%"></p>
+<p style="clear: both;">
 
 **Balanced description** needed to reproduce/predict experiments!
-]
-.column[
-<p style="text-align:center;"><img src="images/pyridine+water_12AA_QM.png" style="width: 45%"></p>
-<p style="clear: both;">
-]
 
 <font color="red">
 Problems
@@ -103,12 +92,6 @@ Problems
   accurately.
 - Moreover, the conformational space is very large and needs to be sampled
   extensively to have meaningful results.
-- Energy decomposition.
-
-<font color="red">
-<center>Once again, approximations needed!!!</center>
-</font>
-<p style="clear: both;">
 
 ---
 layout: false
@@ -138,20 +121,17 @@ layout: false
 layout: false
 
 ## Extensible
-### New Challenges - New Methods - New Software?
+### New Challenges! New Methods! New Software?!?
 
 <p style="text-align:center;"><img src="images/yoda-future.gif" style="width: 100%;"/></p>
 <p style="clear: both;">
-
-- Avoid reinventing the wheel
-- Extensible software architectures
 
 ---
 layout: false
 
 ## Modular
-### Do One Thing and Do It Well
-<p style="text-align:center;"><img src="images/LEGO.jpg" style="width: 40%"></p>
+### Do One Thing, Do It Well
+<p style="text-align:center;"><img src="images/lego.gif" style="width: 80%"></p>
 <p style="clear: both;">
 
 - Delimit capabilities, concerns, results
@@ -170,7 +150,10 @@ layout: false
 ## Sustainable
 ### Software Reuse for a Better Life
 
--
+<p style="text-align:center;"><img src="images/reinvent-wheel.gif" style="width: 100%;"/></p>
+<p style="clear: both;">
+
+.footnote[Source: [IBM Big Data & Analytics Hub](http://www.ibmbigdatahub.com/blog/dont-reinvent-wheel-increase-productivity-strategic-reuse)]
 
 ???
 
@@ -183,7 +166,7 @@ layout: false
 
 ## March of the Solvation Robots
 
-<p style="text-align:center;"><img src="images/mind-map.svg" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/mind-map.png" style="width: 100%"></p>
 <p style="clear: both;">
 
 ???
@@ -208,16 +191,17 @@ Based on these two pillars, we have achieved:
 layout: false
 class: center, middle, inverse
 
-.title[Foundations]
+# Foundations
 
-.subtitle[Continuum Models, Variational Formulation, PCMSolver]
+<p style="text-align:center;"><img src="images/foundations.png" style="width: 100%"></p>
+<p style="clear: both;">
 
 ---
 layout: false
 class: split-50-50
-## Multiscale models.red[<sup>1</sup>]
+## Quantum/Classical Multiscale Models.red[<sup>1</sup>]
 
-- Use **quantum** and **classical** physics together:
+- Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
   * classical for the environment
 
@@ -230,7 +214,7 @@ class: split-50-50
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>1</sup>] H. M. Senn, W. Thiel, _Angew. Chem. Int. Ed. Engl._, __48__, 1198, (2009)]
+.footnote[.red[<sup>1</sup>] H. M. Senn, W. Thiel, _Angew. Chem. Int. Ed._, __48__, 1198, (2009)]
 
 ???
 
@@ -243,7 +227,7 @@ class: split-60-40
 
 ## QM/Continuum.red[<sup>2</sup>]
 
-- Use **quantum** and **classical** physics together:
+- Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
   * _continuum dielectric_ for the environment
 
@@ -267,7 +251,7 @@ class: split-60-40
 layout: false
 class: split-60-40
 
-## QM/Continuum: the polarizable continuum model.red[<sup>2</sup>]
+## QM/Continuum: The Polarizable Continuum Model.red[<sup>2</sup>]
 
 .column[
 - Replace environment with continuum \\(\varepsilon\\)
@@ -287,10 +271,6 @@ class: split-60-40
 \label{eq:radiation}
 \end{align}
 $$`
-
-* \\(L_\star\\) are elliptic differential operators
-* Dirichlet condition: \\([u] (\mathbf{s})\\)
-* Neumann condition: \\([\partial_L u] (\mathbf{s})\\)
 ]
 .column[
 <p style="text-align:right;"><img src="images/alanine.svg" style="width: 40%"></p>
@@ -312,22 +292,26 @@ $$`
   Sobolev spaces
 - \\(\sigma(\mathbf{s})\\) is called the apparent surface charge (ASC)
 
+* \\(L_\star\\) are elliptic differential operators
+* Dirichlet condition: \\([u] (\mathbf{s})\\)
+* Neumann condition: \\([\partial_L u] (\mathbf{s})\\)
+
 ---
 ## Mathematics of PCM.red[<sup>3</sup>]
 
-- Define the _reaction potential_:
+- Define the _reaction potential_
 `$$
  u(\mathbf{r}) = \varphi(\mathbf{r}) + \xi(\mathbf{r})
  = \int_C \mathop{}\!\mathrm{d}\mathbf{r}^\prime \frac{\rho(\mathbf{r}^\prime)}{|\mathbf{r} - \mathbf{r}^\prime|} +
   \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \frac{\color{red}{\sigma(\mathbf{s})}}{|\mathbf{r} - \mathbf{s}|}
 $$`
 
-- _Apparent surface charge_ (ASC):
+- _Apparent surface charge_ (ASC)
 `$$
 \mathcal{T}\color{red}{\sigma} = -\mathcal{R}\color{blue}{\varphi}
 $$`
 
-- Green's functions for \\(L_\star\\) define integral operators:
+- Green's functions for \\(L_\star\\) define integral operators
 
 `$$
  \begin{align}
@@ -428,27 +412,19 @@ $$`
 
 2. Equilibrium values are energies
 3. Convexity
+
+<p style="clear: both;">
 .footnote[.red[<sup>5</sup>] F. Lipparini, _et al._, _J. Chem. Phys._, __133__, 014106, (2010)]
 
 ???
 
 ---
-
-class: split-60-40
+layout: false
 
 ## Variational Advantages.red[<sup>5</sup>]
 
-.column[
-`$$
-U_\mathrm{pol}[\mathrm{p}] = \frac{1}{2}{}^t\mathrm{p}\mathbb{V}\mathrm{p} + {}^t\mathrm{p}\mathrm{s}
-$$`
-- \\(\mathrm{p}\\) is an _independent_ degree of freedom
-- _linear_ QM/classical coupling through \\({}^t\mathrm{p}\mathrm{s}\\)
-]
-.column[
-<p style="text-align:center;"><img src="images/Brain1.jpg" style="width: 40%"></p>
+<p style="text-align:center;"><img src="images/variational-brain.png" style="width: 80%"></p>
 <p style="clear: both;">
-]
 
 1. Coupling to extended Lagrangian dynamics
 2. Avoids nonlinear couplings in the QM Hamiltonian
@@ -471,6 +447,8 @@ $$`
 - p is the polarization degree of freedom
 - s is the source term
 - V is the classical interaction operator
+- \\(\mathrm{p}\\) is an _independent_ degree of freedom
+- _linear_ QM/classical coupling through
 
 ---
 layout: false
@@ -487,18 +465,13 @@ class: split-60-40
   $$`
 * _Apparent surface charge_ (ASC):
   `$$
-   \mathbf{T}(\varepsilon)\color{red}{\mathbf{q}} = - \mathbf{R}\color{blue}{\mathbf{v}}
+   \mathcal{T}\color{red}{\sigma} = - \mathcal{R}\color{blue}{\varphi}
   $$`
 * Fock matrix:
   `$$
-   f_{\mu\nu} = h_{\mu\nu} +
-    \sum_{\kappa\lambda}D_{\kappa\lambda}(g_{\mu\nu\kappa\lambda} - \gamma g_{\mu\lambda\kappa\nu}) +
-    f_{\mathrm{xc}; \mu\nu} +
-    \color{green}{V_{\mu\nu}^\mathrm{PCM}}
-  $$`
-  - PCM term:
-  `$$
-    \color{green}{V_{\mu\nu}^\mathrm{PCM}} = \sum_{I=1}^{N_\mathrm{ts}}\color{red}{q_I} \color{blue}{v_{\mu\nu, I}}
+   f_{\mu\nu} =
+   f^\mathrm{vac}_{\mu\nu} +
+    \color{green}{(\sigma(\mathbf{s}), \varphi_{\mu\nu}(\mathbf{s}))_{\partial C}}
   $$`
 ]
 .column[
@@ -515,7 +488,7 @@ class: split-60-40
 layout: false
 class: split-50-50
 
-## Modularity: do one thing, do it well.red[<sup>6</sup>]
+## Modularity: Do One Thing, Do It Well.red[<sup>6</sup>]
 
 .column[
 ### Coupling
@@ -555,13 +528,14 @@ class: split-50-50
 
 ## Application Programming Interfaces to the Rescue
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Application_programming_interface):
 _In computer programming, an __application programming interface__ (__API__) is
 a set of subroutine definitions, protocols, and tools for building software and
 applications._
 
-<p style="text-align:center;"><img src="images/hypnotoad-api.gif" style="width: 50%;"/></p>
+<p style="text-align:center;"><img src="images/hypnotoad-api.gif" style="width: 45%;"/></p>
 <p style="clear: both;">
+
+.footnote[Source: Wikipedia [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)]
 
 ---
 
@@ -570,7 +544,7 @@ applications._
 * __Encapsulation__ decide what others should know
 * __Development history__ know your past
 * __Documentation__ let others know what you can do
-* __Versioning__ where are we at?
+* __Versioning__ what changed?
 * __Testing__ did you mess up?
 <p style="text-align:center;"><img src="images/stranger-in-the-alps.gif" style="width: 45%;"/></p>
 <p style="clear: both;">
@@ -599,6 +573,7 @@ applications._
 
 ### Testing
 
+- You don't want to find a bug in the Alps
 - Sharpens interfaces
 - Exposes coupling and cohesion
 
@@ -609,7 +584,7 @@ applications._
 
 ---
 
-## PCMSolver: an API for the PCM.red[<sup>7</sup>]
+## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
 - Open-source [LGPLv3](https://www.gnu.org/copyleft/lesser.html)-licensed
 - Developed on [GitHub](https://github.com/PCMSolver/pcmsolver)
@@ -790,9 +765,10 @@ energy = pcmsolver_compute_polarization_energy(pcm_context, mep_lbl, asc_lbl)
 layout: false
 class: center, middle, inverse
 
-.title[Applications]
+# PCM Above and Beyond
 
-.subtitle[PCM Above and Beyond]
+<p style="text-align:center;"><img src="images/mind-map.png" style="width: 100%"></p>
+<p style="clear: both;">
 
 ---
 layout: false
@@ -904,15 +880,10 @@ class: split-50-50
 
 --
   <img class="overlayImage" src="images/paper-iii.png" style="width: 100%" align="middle">
-</div>
-
-.column[
-<p style="text-align:left;"><img src="images/acetone_normal.jpg" style="width: 50%"></p>
-]
-.column[
-<p style="text-align:center;"><img src="images/permittivity_profiles.jpg" style="width: 50%"></p>
 <p style="clear: both;">
-]
+
+<p style="text-align:center;"><img src="images/diffuse+profiles.png" style="width: 100%"></p>
+<p style="clear: both;">
 
 ???
 
@@ -923,64 +894,22 @@ class: split-50-50
 
 ---
 layout: false
+class: split-50-50
+
 ## Green's functions in spherical symmetry
 
-<img src="images/spherical_diffuse.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/equations.png" style="float: left; width: 55%; margin-right: 1%; margin-bottom: 0.5em;">
+.column[
+<img src="images/spherical_diffuse.jpg" style="float: left; width: 50%; margin-right: 1%; margin-bottom: 0.5em;">
 <p style="clear: both;">
+]
+.column[
+  `
+  $$
+  \nabla \cdot [\varepsilon(\mathbf{r})\nabla G(\mathbf{r}, \mathbf{r}^\prime)] = -4\pi\delta(\mathbf{r}-\mathbf{r}^\prime)
+  $$
+  `
+]
 
-- The radial part is solution to:
-`
-$$
-  \frac{\mathop{}\!\mathrm{d}^2 R_\ell}{\mathop{}\!\mathrm{d} r^2} + \left(\frac{2}{r} +
-  \lambda_\varepsilon(r)\right)\frac{\mathop{}\!\mathrm{d} R_\ell}{\mathop{}\!\mathrm{d} r} - \frac{\ell(\ell+1)}{r^2}R_\ell
- = -\frac{4\pi}{r^2}\frac{1}{\varepsilon(r)}\delta(r-r^\prime)
-$$
-`
-   * `\(\lambda_\varepsilon(r) = \frac{\mathop{}\!\mathrm{d}\varepsilon(r)}{\mathop{}\!\mathrm{d}r}\frac{1}{\varepsilon(r)}\)`
-     weighted dielectric distribution
-- Two solutions, `\(u_\ell\sim r^\ell\)` and `\(v_\ell\sim r^{-\ell -1}\)`:
-   * `\(u_\ell\)` and `\(v_\ell\)` to be determined _numerically_
-
-`
-$$
-  R_\ell =
- \begin{cases}
-   c_\ell^{(1)}(r^\prime) u_\ell(r) &+
-   c_\ell^{(2)}(r^\prime) v_\ell(r),\, \text{for}\,\, r < r^\prime \\
-   c_\ell^{(3)}(r^\prime) u_\ell(r) &+
-   c_\ell^{(4)}(r^\prime) v_\ell(r),\, \text{for}\,\, r > r^\prime
- \end{cases}
-$$
-`
-
-???
-
-- The Green's function for a given differential operator is the solution to the
-  differential equation with a point source. It's also called the _fundamental
-  solution_
-- We also have azimuthal symmetry, hence the summation over Legendre
-  polynomials. This can be shown more rigorously starting from the summation
-  over spherical harmonics.
-- The radial equation is similar to the usual one where spherical boundary
-  conditions are imposed. The difference is the additional first order term due
-  to the weighted dielectric distribution, which can be thought to act as a damping
-  term. The source term is also "damped".
-- Given that the permittivity profile is sigmoidal, we impose that the
-  solutions to the homogeneous equation are asymptotically equal to the ones
-  for spherical boundary conditions.
-
----
-layout: false
-## Green's functions in spherical symmetry, contd.
-
-<img src="images/spherical_diffuse.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/equations.png" style="float: left; width: 55%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-
-
-- Two solutions, `\(u_\ell\sim r^\ell\)` and `\(v_\ell\sim r^{-\ell -1}\)`:
-   * `\(W_\ell = \frac{\mathop{}\!\mathrm{d} v_\ell}{\mathop{}\!\mathrm{d}r}u_\ell - \frac{\mathop{}\!\mathrm{d}u_\ell}{\mathop{}\!\mathrm{d}r}v_\ell\)` is the _Wronskian_
 `
 $$
   G(\mathbf{r}, \mathbf{r}^\prime) = \sum_{\ell=0}^\infty G_\ell(\mathbf{r}, \mathbf{r}^\prime)
@@ -1007,108 +936,22 @@ $$
 
 ???
 
+- The Green's function for a given differential operator is the solution to the
+  differential equation with a point source. It's also called the _fundamental
+  solution_
+- We also have azimuthal symmetry, hence the summation over Legendre
+  polynomials. This can be shown more rigorously starting from the summation
+  over spherical harmonics.
+- The radial equation is similar to the usual one where spherical boundary
+  conditions are imposed. The difference is the additional first order term due
+  to the weighted dielectric distribution, which can be thought to act as a damping
+  term. The source term is also "damped".
+- Given that the permittivity profile is sigmoidal, we impose that the
+  solutions to the homogeneous equation are asymptotically equal to the ones
+  for spherical boundary conditions.
 - The actual solutions are fixed by integrating the equation on a vanishingly
   small volume around the source discontinuity
-
----
-class: left
-layout: false
-
-## Separation of the Coulomb singularity
-
-`
-$$
-  G(\mathbf{r}, \mathbf{r}^\prime) = \sum_{\ell=0}^\infty G_\ell(\mathbf{r}, \mathbf{r}^\prime)
-$$
-`
-
-- Use _exact_ expression of Coulomb singularity:
-`
-$$
-  \frac{1}{|\mathbf{r}-\mathbf{r}^\prime|} =
-  \frac{1}{r_>}
-  \sum^\infty_{\ell=0}
-  \left(\frac{r_<}{r_>}\right)^\ell
-  P_\ell(\cos\gamma)
-$$
-`
-- ...modulated by proper coefficient:
-`
-$$
-  G(\mathbf{r}, \mathbf{r}^\prime) =
-  \frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)|\mathbf{r} - \mathbf{r}^\prime|} +
-  G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
-$$
-`
-   * The image potential is _nonsingular_
-- Coefficient is calculated as:
-`
-$$
-  C(\mathbf{r}, \mathbf{r}^\prime)
-  =
-  \frac{1}{r_>}
-  \lim_{\ell\infty}
-  \left(\frac{r_<}{r_>}\right)^\ell
-  \frac{P_\ell(\cos\gamma)}{G_\ell(\mathbf{r}, \mathbf{r}^\prime)}
-$$
-`
-
----
-
-## Separation of the Coulomb singularity, contd.
-
-- Image potential:
-`
-$$
-  G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
-  =
-  \sum_{\color{red}{\ell = 1}}^\infty
-  \left(G_\ell(\mathbf{r}, \mathbf{r}^\prime) -
-  \frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)|\mathbf{r} -
-  \mathbf{r}^\prime|}\right)
-$$
-`
-   * Monopole term removed: it's entirely contained in the singular, Coulomb portion
-   * Unphysical additional polarization would arise at the interface
-   * Consistent with sharp spherical interface results
-
-???
-
 - We have to remove an unphysical monopole contribution
-
----
-
-## Implementation
-
-- Exponential transformation of the radial ODE:
-`
-$$
-  \frac{\mathop{}\!\mathrm{d}^2\rho_\ell}{\mathop{}\!\mathrm{d}r} + \left(\frac{\mathop{}\!\mathrm{d}\rho_\ell}{\mathop{}\!\mathrm{d}r}\right)
-  \left(\frac{\mathop{}\!\mathrm{d}\rho_\ell}{\mathop{}\!\mathrm{d}r} + \frac{2}{r} + \lambda_\varepsilon(r)\right) - \frac{\ell(\ell + 1)}{r^2} = 0
-$$
-`
-- ODE solved using the Bulirsch-Stoer adaptive integrator for the system:
-`
-$$
- \left\lbrace
- \begin{aligned}
- \frac{\mathop{}\!\mathrm{d}\rho_\ell}{\mathop{}\!\mathrm{d}r} &= \sigma_\ell \\
- \frac{\mathop{}\!\mathrm{d}\sigma_\ell}{\mathop{}\!\mathrm{d}r} &= -\sigma_\ell\left(\sigma_\ell + \frac{2}{r} + \lambda_\varepsilon(r)\right) + \frac{l(l+1)}{r^2}
- \end{aligned}
- \right.
-$$
-`
-- Summations truncated to `\(L\)`, separation coefficient evaluated at `\(\ell=2L\)`
-- `\(\mathrm{tanh}\)` and `\(\mathrm{erf}\)` profiles available
-- Cubic spline interpolations for radial sampling of solutions
-- Green's function directional derivative evaluated by a 3-point stencil
-- One-point centroid collocation BEM on spherical polygons (GePol)
-- Available in [LSDALTON](http://daltonprogram.org/) _via_ [PCMSolver](http://pcmsolver.readthedocs.org)
-
-???
-
-- The exponential transformation avoids possible arithmetic overflows
-- Truncation is to `\(L=30\)` by default
 
 ---
 layout: false
@@ -1128,8 +971,8 @@ f(\varepsilon) =  \frac{\varepsilon(z)-1 }{\varepsilon(z)}
 $$`
 
 - Onset of dielectric effect dominated by _Onsager factor_
-- `\(\Sigma\)` has to be differentiable
-- `\(w\)` too small leads to numerical instabilities
+- \\(\Sigma\\) has to be differentiable
+- \\(w\\) too small leads to numerical instabilities
 - B3LYP/aug-cc-pVDZ calculations
 
 ???
@@ -1142,28 +985,6 @@ is the HWHM for the associated distribution function, i.e. its first derivative
 of the dielectric effect will be delayed slightly. This can be rationalized in
 terms of the Onsager factor.
 - The figure assumes `\(c = 10~\AA\)` and the droplet centered at the origin
-
-
----
-layout: false
-
-## Effect of interface width: ions
-
-- Smooth transition between bulk values
-- Wider profile, smoother transition
-- Interface effect delayed (Onsager factor)
-
-<img src="images/Li-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/Br-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-
-???
-
-- on the x axis is the distance from the interface center
-- Lithium and bromide ions
-- Transport from a water droplet to vapour
-- `\(R_0 = 20~\AA\)`
-- Figures report user-defined values of `\(\tilde{w}\)`
 
 ---
 layout: false
@@ -1195,32 +1016,6 @@ layout: false
 - When the dipole moment is normal to the droplet, different parts of the molecule
 experience different dielectric environments. Of course, the interface size
 has to be quite small!
-
----
-layout: false
-
-## Effect of interface width: PNA and L0
-
-- Only when `\(\tilde{w}=20~\AA\)` profile is smooth
-- Molecules experience different dielectric environments
-
-<img src="images/pna-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/L0-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-
-<img src="images/PNA_orientation.jpg" style="float: center; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/L0_orientation.jpg" style="float: center; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-
-???
-
-- on the x axis is the distance from the interface center
-- Both molecules are randomly oriented wrt the droplet
-- Transport from a water droplet to vapour
-- `\(R_0 = 20~\AA\)`
-- Figures report user-defined values of `\(\tilde{w}\)`
-- Given that the molecules are larger, features (bumps) in the
-solvation profiles will be smoothed out only with larger widths
 
 ---
 layout: false
@@ -1258,59 +1053,72 @@ layout: false
 ---
 layout: false
 
-## Effect of interface curvature: acetone
-
-`$$\Delta G_{R_0}(z) = G_{R_0}(z+R_0) - G_{R_0=80} (z+80)$$`
-
-- Profile features: combined effect of width and curvature
-- No effect on bulk values: Gauss' theorem
-- Largest effect localized at interface center
-- Relative to bulk solvation, larger effects than for ions
-- Similar conclusions for static dipole moments
-
-<img src="images/acetone-perp-water_vapor-curvature.jpg" style="width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/dipole-acetone-perp-water_vapor-curvature.jpg" style="width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-
-???
-
-- all interfaces have `\(\tilde{w} = 5.0~\AA\)`
-- we're not taking the difference wrt the planar results as the two
-  implementations are different and we don't want to introduce implementation
-  bias.
-- on the x axis is the distance from the interface center
-- acetone, water to vapor transfer. Dipole moment is normal to droplet
-- The appearance of features at the interface for larger solutes is due both to
-  the width of the interfacial region and the radius of the droplet
-- acetone, water to vapor transfer. Dipole moment is normal to droplet
-- 30% vs. 13% solvation effect wrt bulk solvation when comparing a dipolar to
-  an ionic system
-
----
-
 ## Using Wavelets for the PCM
 
-<div class="imageWrapper">
-- Sparse representation
-- Linear memory and time cost
-- Huge number of surface points
+`
+$$
+\mathbf{A}\mathbf{f} = \mathbf{g}
+$$
+`
 
---
-  <img class="overlayImage" src="images/paper-ii.png" style="width: 90%" align="middle">
-</div>
+**Collocation BEM**
+`$$
+A_{ij} = \int_{\Pi_j} k_A(\mathbf{s}_i, \mathbf{s}^\prime)\mathrm{d}\mathbf{s}^\prime, \quad g_i = g(\mathbf{s}_i)
+$$`
+ - Parametrized diagonal elements
+ - Dense linear systems
+ - Symmetry-breaking
+ - Convergence not ensured
 
---
+**Wavelet Galerkin BEM**
+`$$
+A_{ij} = \int_{\Pi_i}\left(\int_{\Pi_j} k_A(\mathbf{s}, \mathbf{s}^\prime)\mathrm{d}\mathbf{s}^\prime\right)\mathrm{d}\mathbf{s}, \quad g_i = \int_{\Pi_i}g(\mathbf{s})\mathrm{d}\mathbf{s}
+$$`
+ - No parametrization
+ - Sparse linear systems
+ - Symmetry-preserving
+ - Convergence ensured
 
-<div class="imageWrapper">
-  <img class="overlayImage" src="images/a_2_l_0_5_fs.png" style="width: 90%" align="middle">
---
-  <img class="overlayImage" src="images/alpha_convergence.png" style="width: 75%" align="middle">
-</div>
+---
+layout: false
+class: split-60-40
+
+<p style="text-align:center;"><img src="images/paper-ii.png" style="width: 100%"></p>
 <p style="clear: both;">
+
+.column[
+<p style="text-align:center;"><img src="images/finger-structure.png" style="width: 60%"></p>
+<p style="clear: both;">
+]
+.column[
+- _Linear_ space requirements
+- _Linear_ time requirements
+- _Guaranteed_ accuracy
+]
 
 ???
 
-- Use wavelet Galerkin BEM for PCM
+---
+layout: false
+class: split-50-50
+
+## Wavelets for QM/Continuum: Accuracy and Cost
+
+.column[
+<p style="text-align:left;"><img src="images/energy_convergence.png" style="width: 100%"></p>
+<p style="clear: both;">
+]
+.column[
+<p style="text-align:right;"><img src="images/alpha_convergence.png" style="width: 50%"></p>
+<p style="clear: both;">
+]
+
+- Stricter error control
+- Larger number of surface points
+
+???
+
+- Convergence pattern
 
 ---
 layout: false

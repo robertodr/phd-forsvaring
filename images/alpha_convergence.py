@@ -82,7 +82,7 @@ ax2.set_xlabel(r'Patch level')
 labels = [r'2', r'3', r'4', r'5']
 ax2.set_xticklabels(labels)
 
-l4 = ax2.plot((1.5, 5.5), (limit, limit), label='Limit', ls='-.', color=ggplot[3])
+l4 = ax2.plot((1.5, 5.5), (limit, limit), label='Limit', ls='-.', lw=2)
 
 ax.yaxis.set_major_formatter(y_formatter)
 ax.grid(False)
