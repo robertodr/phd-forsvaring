@@ -24,7 +24,7 @@ implementation as an independent library
 
 ---
 
-.title[Introduction]
+# Prelude
 
 ---
 layout: false
@@ -866,11 +866,9 @@ $$`
 
 ---
 layout: false
-class: split-50-50
 
 ## Spherical Diffuse Interfaces
 
-<div class="imageWrapper">
 - Modelling of nonhomogeneous environments
   - Surface enhanced spectroscopies
   - QM/MM only recently, for planar interfaces
@@ -878,8 +876,19 @@ class: split-50-50
 - Continuum approach: consider a spatially varying permittivity
   - Numerical Green's function
 
---
-  <img class="overlayImage" src="images/paper-iii.png" style="width: 100%" align="middle">
+???
+
+- Interfaces are ubiquitous
+- We want to be able to treat chemistry and physics at interfaces, e.g.
+  adsorption phenomena, surface enhanced spectroscopies.
+- Some spectroscopic phenomena are relevant in symmetry-broken environments (SHG)
+
+---
+layout: false
+
+## Spherical Diffuse Interfaces
+
+<p style="text-align:center;"><img src="images/paper-iii.png" style="width: 100%"></p>
 <p style="clear: both;">
 
 <p style="text-align:center;"><img src="images/diffuse+profiles.png" style="width: 100%"></p>
@@ -891,6 +900,7 @@ class: split-50-50
 - We want to be able to treat chemistry and physics at interfaces, e.g.
   adsorption phenomena, surface enhanced spectroscopies.
 - Some spectroscopic phenomena are relevant in symmetry-broken environments (SHG)
+
 
 ---
 layout: false
@@ -926,7 +936,7 @@ $$
   \end{cases}
 $$
 `
-- Components `\(G_\ell(\mathbf{r}, \mathbf{r}^\prime)\)` contain Coulomb and image contributions:
+- Components \\(G_\ell(\mathbf{r}, \mathbf{r}^\prime)\\) contain Coulomb and image contributions:
    * Numerically slowly converging
    * Troublesome for subsequent BEM collocation
 
@@ -1074,7 +1084,6 @@ $$`
 `$$
 A_{ij} = \int_{\Pi_i}\left(\int_{\Pi_j} k_A(\mathbf{s}, \mathbf{s}^\prime)\mathrm{d}\mathbf{s}^\prime\right)\mathrm{d}\mathbf{s}, \quad g_i = \int_{\Pi_i}g(\mathbf{s})\mathrm{d}\mathbf{s}
 $$`
- - No parametrization
  - Sparse linear systems
  - Symmetry-preserving
  - Convergence ensured
@@ -1145,7 +1154,36 @@ $$`
 layout: false
 class: center, middle, inverse
 
-.title[Conclusions]
+# Conclusions
+
+---
+layout: false
+
+.left-column[
+### Variational Formulation
+]
+.right-column[
+**Convenient theoretical foundation**
+- Transparent derivations
+- Framework for quantum/classical polarizable models
+]
+
+---
+layout: false
+
+.left-column[
+### Variational Formulation
+### PCMSolver
+]
+.right-column[
+**Convenient theoretical foundation**
+- Transparent derivations
+- Framework for quantum/classical polarizable models
+
+**Extensible, modular, sustainable development**
+- Develop once, reuse anywhere
+- Facile access to new PCM features
+]
 
 ---
 
@@ -1153,14 +1191,18 @@ layout: false
 
 ## Acknowldegements
 
-- Prof. Luca Frediani
-- Dr. Radovan Bast
+- Luca Frediani (CTCC)
+- Benedetta Mennucci (Università di Pisa)
+- Radovan Bast (University of Tromsø)
+- Filippo Lipparini (University of Mainz)
+- T. Daniel Crawford (Virginia Tech)
+- Lori A. Burns (Georgia Tech)
 
 ---
 name: last-page
 template: inverse
 
-## Thanks for your attention!
+# Thanks for your attention!
 
 <p style="text-align:center;"><img src="images/shoot.gif" style="width: 50%"></p>
 <p style="clear: both;">
