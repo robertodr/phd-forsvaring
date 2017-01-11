@@ -805,10 +805,10 @@ layout: false
 $$`
 
 --
-  <img class="overlayImage" src="images/paper-i.png" style="width: 90%" align="middle">
+  <img class="overlayImage" src="images/paper-i.png" style="width: 85%" align="center">
 </div>
 
-<p style="text-align:center;"><img src="images/rela-mep.svg" style="width: 85%"></p>
+<p style="text-align:center;"><img src="images/rela-mep.png" style="width: 80%"></p>
 <p style="clear: both;">
 
 ???
@@ -820,14 +820,16 @@ layout: false
 
 ## Relativity and Solvation: EPR and pNMR parameters
 
-<div class="imageWrapper">
+<p style="text-align:center;"><img src="images/paper-iv.png" style="width: 100%"></p>
+<p style="clear: both;">
+
 `$$
 \begin{align}
-g_{uv}   &= \frac{2c} {\langle \tilde{S}_v \rangle} \,
+g_{uv}   = \frac{2c} {\langle \tilde{S}_v \rangle} \,
            \mathrm{Tr} \left\{
            \mathbf{\Lambda}_{B_u} \mathbf{D}^{(J_v)}
                        \right\},
-\quad
+\quad&\quad
   \left(\mathbf{\Lambda}_{B_u}\right)_{\lambda\tau} = \frac{1}{2}
   \left\langle
        \mathbf{X}_\lambda
@@ -837,11 +839,11 @@ g_{uv}   &= \frac{2c} {\langle \tilde{S}_v \rangle} \,
        \mathbf{X}_\tau
   \right\rangle.
 \\
-A^M_{uv} &= \frac{1} {\langle \tilde{S}_v \rangle} \,
+A^M_{uv} = \frac{1} {\langle \tilde{S}_v \rangle} \,
            \mathrm{Tr} \left\{
            \mathbf{\Lambda}_{I^M_u} \mathbf{D}^{(J_v)}
                        \right\},
-\quad
+\quad&\quad
 \left(\mathbf{\Lambda}^{\mathrm{PN}}_{I^M_u}\right)_{\lambda\tau}
     = \gamma^M
     \left\langle
@@ -853,16 +855,28 @@ A^M_{uv} &= \frac{1} {\langle \tilde{S}_v \rangle} \,
        \right|
        \mathbf{X}_\tau
     \right\rangle
+\\
+\delta_M^\mathrm{para} &= \frac{\mu_e}{12\gamma^MkT} \,
+                        \text{Tr} \left( \mathbf{g}\mathbf{A}^\mathrm{T}_M \right)
 \end{align}
 $$`
 
---
-  <img class="overlayImage" src="images/paper-iv.png" style="width: 90%" align="middle">
-</div>
+- Expectation values
+- Particularly sensitive to the environment
 
 ???
 
 - We want properties
+
+---
+layout: false
+
+## Relativity and Solvation: EPR and pNMR parameters
+
+<p style="text-align:center;"><img src="images/pNMR-tab3.png" style="width: 100%"></p>
+<p style="clear: both;">
+
+???
 
 ---
 layout: false
@@ -1087,6 +1101,8 @@ $$`
  - Sparse linear systems
  - Symmetry-preserving
  - Convergence ensured
+
+???
 
 ---
 layout: false
