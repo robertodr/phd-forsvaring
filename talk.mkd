@@ -8,7 +8,7 @@ class: center, middle, inverse
 
 .author[Roberto Di Remigio]
 
-.institution[UiT -- The Arctic University of Norway]
+.institution[UiT - The Arctic University of Norway]
 
 .date[16 January 2017, Tromsø]
 
