@@ -1147,7 +1147,7 @@ class: split-50-50
 ---
 layout: false
 
-## Molecular Response Properties
+## Arbitrary Order Molecular Response Properties in Solution
 
 <div class="imageWrapper">
   <img class="overlayImage" src="images/pcm_openrsp.svg" style="width: 90%" align="middle">
@@ -1157,18 +1157,82 @@ layout: false
 
 ---
 layout: false
+
+## Exploiting Our Variational Advantages
+
+`
+$$
+ \tilde{L}^a(\tilde{\mathbf{D}}, \color{red}{\tilde{\sigma}}, t)
+ \overset{\lbrace\text{Tr}\rbrace_T}{=}
+ \color{green}{\tilde{\mathcal{G}}^{00,a}} - \tilde{\mathbf{S}}^a\tilde{\mathbf{W}}
+$$
+`
+
+- Fixed cavity approximation
+`
+$$
+\color{green}{\tilde{\mathcal{G}}^{00,a}}(\tilde{\mathbf{D}}, \color{red}{\tilde{\sigma}}, t)
+\overset{\text{Tr}}{=}
+(\tilde{\mathbf{h}}^a + \tilde{\mathbf{V}}^{t,a} +
+\frac{1}{2}\tilde{\mathbf{G}}^{\gamma, a}(\tilde{\mathbf{D}}) +
+\tilde{\mathbf{F}}^{\Omega_a}_\mathrm{xc}
+-\frac{\mathrm{i}}{2}\tilde{\mathbf{T}}^a)\tilde{\mathbf{D}} + h_\mathrm{nuc}^a
++\color{red}{\tilde{\sigma}\tilde{\mathbf{\varphi}}^a\tilde{\mathbf{D}}}
+$$
+`
+
+- Response functions
+`
+$$
+\langle\langle A; B \rangle\rangle_{\omega_b} =
+    L^{ab}
+ \overset{\lbrace\text{Tr}\rbrace_T}{=}
+\color{green}{\mathcal{G}^{00,ab}}
++\mathcal{G}^{10,a}\color{blue}{\mathbf{D}^{b}}
++\mathcal{G}^{01,a}\color{red}{\sigma^{b}}
+-\mathbf{S}^{ab}\mathbf{W} - \mathbf{S}^{a}\mathbf{W}^{b}
+$$
+`
+
+- PCM response equation
+`
+$$
+\begin{alignat*}{2}
+  \mathcal{R}^{-1}\mathcal{T}\color{blue}{\sigma_\mathrm{H}^{b_N}}
+  +\text{Tr}\mathbf{\varphi}\color{blue}{\mathbf{D}_\mathrm{H}^{b_N}} = 0
+  \quad&\quad
+  \mathcal{R}^{-1}\mathcal{T}\color{orange}{\sigma_\mathrm{P}^{b_N}}
+  +\text{Tr}\mathbf{\varphi}\color{orange}{\mathbf{D}_\mathrm{P}^{b_N}} =
+  \color{orange}{\Phi^{(n-1)}_\omega}
+\end{alignat*}
+$$
+`
+
+- \\(N\\)-the order response equations
+`
+$$
+\bbox[SkyBlue, 5pt]{\left[\mathbf{E}^{[2]} - \omega_{b_N}\mathbf{S}^{[2]} \right]
+\mathbf{X}^{b_N}}
+=\bbox[Orange, 5pt]{\mathbf{M}_\mathrm{RHS}^{b_N}}
+$$
+`
+
+---
+layout: false
 class: split-50-50
 
-## Molecular Response Properties
+## Multiphoton Absorption in Solution
 
-- The variational formulation lets us transparently extend the _in vacuo_ formulation
-- Results as in the poster
 .column[
-<p style="text-align:center;"><img src="images/PDNB_energy.svg" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/PDNB_energy.png" style="width: 100%"></p>
 <p style="clear: both;">
+
+- Nonequilibrium solvation
+- Odd-order MPA
+- Even-order MPA
 ]
 .column[
-<p style="text-align:center;"><img src="images/PDNB_MPA.svg" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/PDNB_MPA.png" style="width: 50%"></p>
 <p style="clear: both;">
 ]
 
