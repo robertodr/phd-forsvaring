@@ -103,7 +103,7 @@ layout: false
 - Fast development
 - Reproducibility.red[<sup>1</sup>]
 
-.footnote[.red[<sup>1</sup>] L. Hatton and G. Warr, [arXiv [q-bio.QM]](https://arxiv.org/abs/1608.06897) (2016)]
+.footnote[.red[<sup>1</sup>] Hatton, L.; Warr, G. [arXiv [q-bio.QM]](https://arxiv.org/abs/1608.06897), (2016)]
 
 ???
 
@@ -152,7 +152,7 @@ layout: false
 <p style="text-align:center;"><img src="images/reinvent-wheel.gif" style="width: 100%;"/></p>
 <p style="clear: both;">
 
-.footnote[Source: [IBM Big Data & Analytics Hub](http://www.ibmbigdatahub.com/blog/dont-reinvent-wheel-increase-productivity-strategic-reuse)]
+.footnote[Image: [IBM Big Data & Analytics Hub](http://www.ibmbigdatahub.com/blog/dont-reinvent-wheel-increase-productivity-strategic-reuse)]
 
 ???
 
@@ -198,7 +198,7 @@ class: center, middle, inverse
 ---
 layout: false
 class: split-50-50
-## Quantum/Classical Multiscale Models.red[<sup>1</sup>]
+## Quantum/Classical Multiscale Models.red[<sup>2</sup>]
 
 - Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
@@ -212,8 +212,7 @@ class: split-50-50
 <p style="text-align:center;"><img src="images/pyridine+water_12AA_QMMM.png" style="width: 50%"></p>
 <p style="clear: both;">
 ]
-
-.footnote[.red[<sup>1</sup>] H. M. Senn, W. Thiel, _Angew. Chem. Int. Ed._, __48__, 1198, (2009)]
+.footnote[.red[<sup>2</sup>] Senn, H. M.; Thiel, W. _Angew. Chem. Int. Ed._ (2009), __48__, 1198]
 
 ???
 
@@ -224,7 +223,7 @@ class: split-50-50
 layout: false
 class: split-60-40
 
-## QM/Continuum.red[<sup>2</sup>]
+## QM/Continuum.red[<sup>3</sup>]
 
 - Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
@@ -242,7 +241,7 @@ class: split-60-40
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>2</sup>] J. Tomasi, B. Mennucci, R. Cammi, _Chem. Rev._, __105__, 2999, (2005)]
+.footnote[.red[<sup>3</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
 
 ???
 
@@ -250,7 +249,7 @@ class: split-60-40
 layout: false
 class: split-60-40
 
-## QM/Continuum: The Polarizable Continuum Model.red[<sup>2</sup>]
+## QM/Continuum: The Polarizable Continuum Model.red[<sup>3</sup>]
 
 .column[
 - Replace environment with continuum \\(\varepsilon\\)
@@ -276,7 +275,7 @@ $$`
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>2</sup>] J. Tomasi, B. Mennucci, R. Cammi, _Chem. Rev._, __105__, 2999, (2005)]
+.footnote[.red[<sup>3</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
 
 ???
 
@@ -296,7 +295,7 @@ $$`
 * Neumann condition: \\([\partial_L u] (\mathbf{s})\\)
 
 ---
-## Mathematics of PCM.red[<sup>3</sup>]
+## Mathematics of PCM.red[<sup>4</sup>]
 
 - Define the _reaction potential_
 `$$
@@ -320,7 +319,7 @@ $$`
  \end{align}
 $$`
 
-.footnote[.red[<sup>3</sup>] E. Cancès, B. Mennucci, _J. Math. Chem._, __23__, 309, (1998)]
+.footnote[.red[<sup>4</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
 
 ???
 
@@ -333,7 +332,7 @@ $$`
 
 ---
 
-## A PCM for All Seasons.red[<sup>3</sup>]
+## A PCM for All Seasons.red[<sup>4</sup>]
 
 Green's functions for \\(L_\star\\) define integral operators:
 - Environments with anisotropies and nonuniformities:
@@ -359,7 +358,7 @@ $$`
 </font>
 <p style="clear: both;">
 
-.footnote[.red[<sup>3</sup>] E. Cancès, B. Mennucci, _J. Math. Chem._, __23__, 309, (1998)]
+.footnote[.red[<sup>4</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
 
 ???
 
@@ -367,7 +366,7 @@ $$`
 layout: false
 class: split-70-30
 
-## Boundary element method and PCM.red[<sup>4</sup>]
+## Boundary element method and PCM.red[<sup>5</sup>]
 
 .column[
 Solution by a boundary element method (BEM) <img src="images/smiley.svg" style="width: 5%">
@@ -388,7 +387,7 @@ $$`
 - Similar equation for IEF-PCM, isotropic PCM and COSMO
 - _Independent_ of QM method!
 
-.footnote[.red[<sup>4</sup>] A. Ern and J. L. Guermond, _Theory and Practice of Finite Elements_, Springer, 2004]
+.footnote[.red[<sup>5</sup>] Ern, A; Guermond, J.-L. _Theory and Practice of Finite Elements_, Springer, 2004]
 
 ???
 
@@ -398,7 +397,7 @@ $$`
 ---
 layout: false
 
-## Variational Formulation of the PCM.red[<sup>5</sup>]
+## Variational Formulation of the PCM.red[<sup>6</sup>]
 
 Find \\(\sigma(\mathbf{s})\\) minimizing:
 `$$
@@ -412,30 +411,29 @@ $$`
 2. Equilibrium values are energies
 3. Convexity
 
-<p style="clear: both;">
-.footnote[.red[<sup>5</sup>] F. Lipparini, _et al._, _J. Chem. Phys._, __133__, 014106, (2010)]
+.footnote[.red[<sup>6</sup>] Lipparini, F. _et al._ _J. Chem. Phys._ (2010), __133__, 014106]
 
 ???
 
 ---
 layout: false
 
-## Variational Advantages.red[<sup>5</sup>]
+## Variational Advantages.red[<sup>7</sup>]
 
 <p style="text-align:center;"><img src="images/variational-brain.png" style="width: 80%"></p>
 <p style="clear: both;">
 
-1. Coupling to extended Lagrangian dynamics
-2. Avoids nonlinear couplings in the QM Hamiltonian
-3. _Classical_ Hellmann-Feynman theorem:
+1. Avoids nonlinear couplings in the QM Hamiltonian
+2. _Classical_ Hellmann-Feynman theorem:
 `$$
 \frac{\mathop{}\!\mathrm{d}U_\mathrm{pol}}{\mathop{}\!\mathrm{d} F} =
 \frac{\partial U_\mathrm{pol}}{\partial F} + \cancelto{0}{\frac{\partial U_\mathrm{pol}}{\partial \mathrm{p}}\frac{\partial \mathrm{p}}{\partial F}}
 $$`
-4. Works also for polarizable MM models
+3. .red[Valid for polarizable MM models]
+4. Extended Lagrangian dynamics
 
 
-.footnote[.red[<sup>5</sup>] F. Lipparini, _et al._, _J. Chem. Phys._, __133__, 014106, (2010)]
+.footnote[.red[<sup>7</sup>] Lipparini, F. _et al._ _J. Chem. Theory Comput._ (2015), __11__, 623]
 
 ???
 
@@ -453,7 +451,7 @@ $$`
 layout: false
 class: split-60-40
 
-## Self-Consistent Field with PCM.red[<sup>2</sup>]
+## Self-Consistent Field with PCM.red[<sup>3</sup>]
 
 .column[
 * _Molecular electrostatic potential_ (MEP):
@@ -478,7 +476,7 @@ class: split-60-40
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>2</sup>] J. Tomasi, B. Mennucci, R. Cammi, _Chem. Rev._, __105__, 2999, (2005)]
+.footnote[.red[<sup>3</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
 
 ???
 
@@ -487,7 +485,7 @@ class: split-60-40
 layout: false
 class: split-50-50
 
-## Modularity: Do One Thing, Do It Well.red[<sup>6</sup>]
+## Modularity: Do One Thing, Do It Well
 
 .column[
 ### Coupling
@@ -505,7 +503,7 @@ class: split-50-50
 ]
 <p style="clear: both;">
 
-.footnote[.red[<sup>6</sup>] Reproduced, with modifications, from [Library design the hard way](http://cicero.xyz/v2/remark/github/bast/talk-library-design/master/talk.mkd/#1)]
+.footnote[Reproduced, with modifications, from [Library design the hard way](http://cicero.xyz/v2/remark/github/bast/talk-library-design/master/talk.mkd/#1)]
 
 ???
 
@@ -583,7 +581,7 @@ applications._
 
 ---
 
-## PCMSolver: An API for the PCM.red[<sup>7</sup>]
+## PCMSolver: An API for the PCM.red[<sup>8</sup>]
 
 - Open-source [LGPLv3](https://www.gnu.org/copyleft/lesser.html)-licensed
 - Developed on [GitHub](https://github.com/PCMSolver/pcmsolver)
@@ -591,11 +589,11 @@ applications._
 <p style="text-align:center;"><img src="images/pcmsolver-scheme.png" style="width: 60%"></p>
 <p style="clear: both;">
 
-.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 
-## PCMSolver: an API for the PCM.red[<sup>7</sup>]
+## PCMSolver: An API for the PCM.red[<sup>8</sup>]
 
 - Capabilities
   * Traditional collocation solvers
@@ -611,11 +609,11 @@ applications._
   * Pure C for interoperability
   * Fortran bindings built on-demand
 
-.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 
-## PCMSolver: an API for the PCM.red[<sup>7</sup>]
+## PCMSolver: An API for the PCM.red[<sup>8</sup>]
 
 - Testing
   * Use [Catch](https://github.com/philsquared/Catch) C++ framework
@@ -632,7 +630,7 @@ applications._
   * Sphinx for users and programmers documentation
   * Served on [ReadTheDocs](https://readthedocs.org/)
 
-.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 layout: false
