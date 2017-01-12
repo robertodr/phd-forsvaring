@@ -24,7 +24,7 @@ implementation as an independent library
 
 ---
 
-# Prelude
+# Prologue
 
 ---
 layout: false
@@ -402,7 +402,7 @@ layout: false
 
 Find \\(\sigma(\mathbf{s})\\) minimizing:
 `$$
-U_\mathrm{PCM}[\sigma(\mathbf{s})] = \color{red}{\frac{1}{2} \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \sigma(\mathbf{s})[\mathcal{R}\mathcal{T}]\sigma(\mathbf{s})} + \color{blue}{\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \varphi(\mathbf{s})\sigma(\mathbf{s})}
+U_\mathrm{PCM}[\sigma(\mathbf{s})] = \color{red}{\frac{1}{2} \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \sigma(\mathbf{s})[\mathcal{R}^{-1}\mathcal{T}]\sigma(\mathbf{s})} + \color{blue}{\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \varphi(\mathbf{s})\sigma(\mathbf{s})}
 $$`
 
 1. Physically meaningful:
@@ -429,7 +429,7 @@ layout: false
 2. Avoids nonlinear couplings in the QM Hamiltonian
 3. _Classical_ Hellmann-Feynman theorem:
 `$$
-\frac{\mathrm{d}U_\mathrm{pol}}{\mathrm{d} F} =
+\frac{\mathop{}\!\mathrm{d}U_\mathrm{pol}}{\mathop{}\!\mathrm{d} F} =
 \frac{\partial U_\mathrm{pol}}{\partial F} + \cancelto{0}{\frac{\partial U_\mathrm{pol}}{\partial \mathrm{p}}\frac{\partial \mathrm{p}}{\partial F}}
 $$`
 4. Works also for polarizable MM models
@@ -458,13 +458,13 @@ class: split-60-40
 .column[
 * _Molecular electrostatic potential_ (MEP):
   `$$
-  v_{I} = \sum_{\mu\nu}^{N_\mathrm{AO}} \color{blue}{v_{\mu\nu, I}} D_{\nu\mu},
+  \varphi(\mathbf{s}) = \sum_{\mu\nu}^{N_\mathrm{AO}} \color{blue}{\varphi_{\mu\nu}(\mathbf{s})} D_{\nu\mu},
   \quad
-  \color{blue}{v_{\mu\nu, I}} = \int\mathop{}\!\mathrm{d}\mathbf{r} \frac{-\chi^*_\mu(\mathbf{r})\chi_\nu(\mathbf{r}) }{|\mathbf{r} - \mathbf{s}_I|}
+  \color{blue}{\varphi_{\mu\nu}(\mathbf{s}) }= \int\mathop{}\!\mathrm{d}\mathbf{r} \frac{-\chi^*_\mu(\mathbf{r})\chi_\nu(\mathbf{r}) }{|\mathbf{r} - \mathbf{s}|}
   $$`
 * _Apparent surface charge_ (ASC):
   `$$
-   \mathcal{T}\color{red}{\sigma} = - \mathcal{R}\color{blue}{\varphi}
+   \mathcal{T}\color{red}{\sigma(\mathbf{s})} = - \mathcal{R}\color{blue}{\varphi(\mathbf{s})}
   $$`
 * Fock matrix:
   `$$
@@ -774,34 +774,30 @@ layout: false
 
 ## PCM Beyond SCF: MBPT and Coupled Cluster
 
-- PCM-CC _effective_ Lagrangian
+
+<p style="text-align:center;"><img src="images/excitations.png" style="width: 40%"></p>
+<p style="clear: both;">
 `
 $$
-\mathcal{L}_\mathrm{eff}(t, \bar{t}, \mathbf{p})_\mathcal{M} =
-\langle\mathrm{HF} | \overline{H} | \mathrm{HF}\rangle
-  +\sum_{u=1}^{\mathcal{M}}\langle\bar{t}_{u} | \overline{H} | \mathrm{HF}\rangle
-  +U_\mathrm{pol}^\mathrm{ref}
-+\frac{1}{2}{}^t\mathrm{p}\mathbb{V}\mathrm{p} +
-{}^t\mathrm{p}\mathrm{s}_{\mathrm{N}}(t,\bar{t})_\mathcal{M}
-$$
-`
-- PCM-CC equations
-`
-$$
-\begin{align}
- &\epsilon_{\mu_q}\color{blue}{t_{\mu_q}} +\langle\mu_q | \overline{\Phi} | \mathrm{HF}\rangle
- +{}^t\color{red}{\mathrm{p}}\langle\mu_q | \overline{\mathrm{s}} | \mathrm{HF}\rangle = 0 \\
- &\epsilon_{\mu_q}\color{green}{\bar{t}_{\mu_q}}
-  +\langle\mathrm{HF} | [\overline{\Phi}, \tau_{\mu_q}] | \mathrm{HF}\rangle
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\overline{\Phi}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
-  &+{}^t\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [[\mathrm{s}, T], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
-  &\mathbb{V}\color{red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{blue}{t}, \color{green}{\bar{t}})_\mathcal{M} = 0
-\end{align}
+|\mathrm{CC}\rangle = \mathrm{e}^T |\mathrm{HF}\rangle,
+\quad
+T = \sum_{u=1}^\mathcal{M} T_u = \sum_{u=1}^\mathcal{M}\sum_{\mu_u}t_{\mu_u}\tau_{\mu_u},
+\quad
+\overline{O} = \mathrm{e}^{-T}O\mathrm{e}^{T}
 $$
 `
 
+- PCM-CC _effective_ Lagrangian
+`
+$$
+\mathcal{L}_\mathrm{eff}(\color{blue}{t}, \color{green}{\bar{t}}, \color{red}{\mathbf{p}})_\mathcal{M} =
+\langle\mathrm{HF} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
+  +U_\mathrm{pol}^\mathrm{ref}
++\frac{1}{2}{}^t\color{red}{\mathrm{p}}\mathbb{V}\color{red}{\mathrm{p}} +
+{}^t\color{red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{blue}{t},\color{green}{\bar{t}})_\mathcal{M}
+$$
+`
 ???
 
 - Attacking the methodology axis
@@ -812,10 +808,30 @@ $$
 ---
 layout: false
 
-## PCM Beyond SCF: MBPT and Coupled Cluster
+## PTED-CC
 
-<p style="text-align:center;"><img src="images/barking-wrong-tree.gif" style="width: 80%"></p>
+<div class="imageWrapper">
+`
+$$
+\begin{align}
+ &\epsilon_{\mu_q}\color{blue}{t_{\mu_q}} +\langle\mu_q | \color{blue}{\overline{\Phi}} | \mathrm{HF}\rangle
+ +{}^t\color{red}{\mathrm{p}}\langle\mu_q | \color{blue}{\overline{\mathrm{s}}} | \mathrm{HF}\rangle = 0 \\
+ &\epsilon_{\mu_q}\color{green}{\bar{t}_{\mu_q}}
+  +\langle\mathrm{HF} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
+  &+{}^t\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [[\mathrm{s}, \color{blue}{T}], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
+  &\mathbb{V}\color{red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{blue}{t}, \color{green}{\bar{t}})_\mathcal{M} = 0
+\end{align}
+$$
+`
+<p style="text-align:center;"><img src="images/pted-cc.png" style="width: 100%"></p>
 <p style="clear: both;">
+
+--
+  <img class="overlayImage" src="images/barking-wrong-tree.gif" style="width: 100%" align="center">
+</div>
 
 ???
 
@@ -823,6 +839,43 @@ layout: false
 - Approximate quantum/classical coupling schemes
 - MBPT expansion: 2n+1 and 2n+2 rules
 - Approximate CC methods
+
+---
+layout: false
+
+## PTED-CCSD(T) and PTED-\\(\Lambda\\)CCSD(T)
+
+.left-column[
+### PTED-MBPT
+]
+.right-column[
+- Perturbative expansion of PTED-CC
+- Source operator \\(\mathrm{s}\\) is _zeroth-order_
+- Use \\(2n + 1\\) and \\(2n + 2\\) rules
+
+#### PTED-\\(\Lambda\\)CCSD(T)
+`
+$$
+  G_{\Lambda(\text{T})}
+  =\sum_{u=1}^2\langle\color{green}{\bar{t}_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +{}^t\color{red}{\mathrm{p}^{*}}\langle\color{green}{\bar{t}_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+$$
+`
+#### PTED-CCSD(T)
+
+`
+$$
+  G_{(\text{T})}
+  =\sum_{u=1}^2\langle\color{blue}{t_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +{}^t\color{red}{\mathrm{p}^{*}}\langle\color{blue}{t_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+$$
+`
+]
+
+???
+
+- Similarly for iterative approximate singles-doubles (CC2) and
+  singles-doubles-triples (CC3) methods
 
 ---
 layout: false
@@ -1120,7 +1173,8 @@ $$
 
 **Collocation BEM**
 `$$
-A_{ij} = \int_{\Pi_j} k_A(\mathbf{s}_i, \mathbf{s}^\prime)\mathrm{d}\mathbf{s}^\prime, \quad g_i = g(\mathbf{s}_i)
+A_{ij} = \int_{\Pi_j} k_A(\mathbf{s}_i, \mathbf{s}^\prime)\mathop{}\!\mathrm{d}\mathbf{s}^\prime,
+\quad g_i = g(\mathbf{s}_i)
 $$`
  - Parametrized diagonal elements
  - Dense linear systems
@@ -1129,7 +1183,8 @@ $$`
 
 **Wavelet Galerkin BEM**
 `$$
-A_{ij} = \int_{\Pi_i}\left(\int_{\Pi_j} k_A(\mathbf{s}, \mathbf{s}^\prime)\mathrm{d}\mathbf{s}^\prime\right)\mathrm{d}\mathbf{s}, \quad g_i = \int_{\Pi_i}g(\mathbf{s})\mathrm{d}\mathbf{s}
+A_{ij} = \int_{\Pi_i}\left(\int_{\Pi_j} k_A(\mathbf{s}, \mathbf{s}^\prime)\mathop{}\!\mathrm{d}\mathbf{s}^\prime\right)\mathop{}\!\mathrm{d}\mathbf{s},
+\quad g_i = \int_{\Pi_i}g(\mathbf{s})\mathop{}\!\mathrm{d}\mathbf{s}
 $$`
  - Sparse linear systems
  - Symmetry-preserving
