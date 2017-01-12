@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.052834"
-     inkscape:cx="562.51553"
+     inkscape:zoom="1"
+     inkscape:cx="556.26319"
      inkscape:cy="148.98207"
      inkscape:document-units="px"
-     inkscape:current-layer="g4368"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="2560"
      inkscape:window-height="1376"
@@ -266,15 +266,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:21.29232597px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="11.475167"
-       y="356.64975"
+       x="31.448164"
+       y="405.28494"
        id="text4162-4-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="11.475167"
-         y="356.64975"
+         x="31.448164"
+         y="405.28494"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
-         id="tspan4967-5">Update</tspan></text>
+         id="tspan4967-5">and</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:21.29232597px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -527,7 +527,7 @@
              id="polygon4591" /></g></g>    </g>
     <g
        id="g4894"
-       transform="matrix(0.75,0,0,0.75,-19.04831,7.38651)">
+       transform="matrix(0.75,0,0,0.75,-38.04831,8.5720409)">
       <g
          transform="translate(-267.77115,179.11314)"
          id="g4693">
@@ -554,7 +554,7 @@
     </g>
     <g
        id="g4888"
-       transform="matrix(0.75,0,0,0.75,-49.46047,26.30695)">
+       transform="matrix(0.75,0,0,0.75,-33.46047,27.492481)">
       <g
          transform="translate(-149.16111,153.35439)"
          id="g4809">
@@ -579,5 +579,17 @@
              d="m 463.29,421.2 -0.13,0.08 -0.13,0.08 -0.12,0.09 -0.12,0.09 -0.11,0.09 -0.11,0.1 -0.1,0.1 -0.11,0.1 -0.09,0.1 -0.1,0.11 -0.09,0.1 -0.08,0.11 -0.08,0.11 -0.08,0.11 -0.08,0.11 -0.07,0.11 -0.06,0.12 -0.06,0.11 -0.06,0.12 -0.05,0.11 -0.05,0.12 -0.05,0.11 -0.04,0.12 -0.04,0.11 -0.03,0.11 -0.03,0.12 -0.02,0.11 -0.02,0.11 -0.02,0.11 -0.01,0.11 0,0.11 -0.01,0.1 c 0,2.33 1.6,3.37 3.74,3.37 3,0 4.48,-1.64 5.64,-6.12 l 0.75,0 -0.25,6.78 -0.55,0 c -0.4,-0.45 -0.61,-0.5 -0.79,-0.5 -0.36,0 -0.86,0.16 -1.41,0.39 -1.05,0.5 -2.14,0.56 -3.33,0.56 -4.09,0 -6.87,-2.2 -6.87,-6.14 0,-2.53 1.84,-4.92 5.97,-7.22 l 2.68,-1.5 c 1.66,-0.89 2.64,-2.18 2.64,-3.73 0,-2.05 -1.59,-3.69 -4.12,-3.69 -3.44,0 -5.28,2.21 -6.33,7.03 l -0.8,0 0,-7.82 0.64,0 c 0.3,0.5 0.61,0.61 1.21,0.61 0.54,0 1.09,-0.07 2.28,-0.46 1.15,-0.4 2.59,-0.45 3.64,-0.45 3.8,0 6.98,2.89 6.98,6.23 0,2.83 -1.2,4.19 -4.39,6.13 z"
              id="path4815" /></g>      </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.29232597px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="13.392604"
+       y="354.47623"
+       id="text4162-4-9-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="13.392604"
+         y="354.47623"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Heros';-inkscape-font-specification:'TeX Gyre Heros Bold'"
+         id="tspan4967-5-6">Update</tspan></text>
   </g>
 </svg>
