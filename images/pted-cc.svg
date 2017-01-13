@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1009789"
-     inkscape:cx="518.4188"
+     inkscape:zoom="1.14"
+     inkscape:cx="484.0454"
      inkscape:cy="148.98207"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="2560"
      inkscape:window-height="1376"
@@ -128,7 +128,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -139,7 +139,7 @@
      transform="translate(239.0172,-290.59991)"
      style="display:inline">
     <rect
-       style="opacity:0.15;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.5;fill:#00776b;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4138-9"
        width="221.08981"
        height="102.43594"
@@ -148,7 +148,7 @@
        rx="33.903"
        ry="33.903" />
     <rect
-       style="opacity:0.15;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.5;fill:#00776b;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4138"
        width="221.08981"
        height="102.43594"
@@ -157,7 +157,7 @@
        rx="33.903"
        ry="33.903" />
     <rect
-       style="opacity:0.15;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.9;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4138-93"
        width="221.08981"
        height="102.43594"
@@ -167,7 +167,7 @@
        ry="33.903" />
     <path
        sodipodi:type="star"
-       style="opacity:0.15;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.5;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path5014"
        sodipodi:sides="4"
        sodipodi:cx="822.09332"
@@ -181,7 +181,7 @@
        inkscape:randomized="0"
        d="m 822.09332,441.73926 -75.56967,-75.56967 75.56967,-75.56968 75.56967,75.56967 z" />
     <rect
-       style="opacity:0.15;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.5;fill:#00776b;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4138-9-2"
        width="131.19081"
        height="102.43594"
@@ -482,16 +482,12 @@
          id="g4567"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><g
            id="g4874"><path
-             style="fill:#000000;stroke-width:0"
-             inkscape:connector-curvature="0"
-             d="m 466.07,439.93 -2.61,0 1.15,4.81 -0.48,0 c -1.53,-3.23 -3.8,-4.62 -6.59,-5.14 l -0.19,-1.08 2.87,0 -3.03,-11.93 c -0.11,-0.41 -0.19,-0.89 -0.19,-1.38 0,-1.01 0.32,-1.94 1.47,-1.94 2.19,0 4.07,2.83 4.96,3.99 l -0.49,0.4 c -1.37,-1.86 -2.23,-1.93 -2.23,-1.93 -0.49,0 -0.6,0.22 -0.6,0.45 0,0.11 0.03,0.3 0.07,0.41 l 2.9,11.93 2.63,0 z"
-             id="path4569" /><path
              style="fill:#ff0000;fill-opacity:1;stroke-width:0"
              inkscape:connector-curvature="0"
              d="m 477.72,429.01 -0.29,0.11 c -2.64,-1.05 -4.44,-1.7 -7.18,-2.55 l 0,-0.79 c 0.44,0.04 0.8,0.04 1.24,0.04 1.7,0 2.05,-0.5 2.05,-2.82 l 0,-23.33 c 0,-2.6 -0.55,-3.14 -3.49,-3.44 l 0,-0.84 12.06,0 0,0.89 c -3.75,0.06 -4.39,0.61 -4.39,3.75 l 0,7.81 c 1.8,-1.64 2.94,-2.14 5.03,-2.14 l 0.16,1.59 c -2.34,0 -5.19,1.8 -5.19,3.3 l 0,12.25 c 0,1.5 2.8,3.28 5.08,3.28 3.69,0 6.13,-3.78 6.13,-9.61 0,-5.48 -2.44,-9.22 -6.02,-9.22 l -0.16,-1.59 c 5.93,0 10.47,5.58 10.47,12.81 0,6.17 -3.5,10.61 -8.33,10.61 -2.78,0 -4.98,-1.2 -7.17,-3.94 z"
              id="path4571" /><polygon
              style="fill:#000000;stroke-width:0"
-             points="508.8,395.59 511.4,395.59 501.88,418.7 511.45,441.71 508.85,441.71 498.6,419.2 498.6,418.2 "
+             points="508.85,441.71 498.6,419.2 498.6,418.2 508.8,395.59 511.4,395.59 501.88,418.7 511.45,441.71 "
              id="polygon4573" /><path
              style="fill:#000000;stroke-width:0"
              inkscape:connector-curvature="0"
@@ -523,7 +519,7 @@
              d="m 679.03,432.06 -0.25,7.12 -26.35,0 0,-0.95 c 3.84,-0.3 4.34,-0.94 4.34,-4.58 l 0,-21.33 c 0,-4.32 -0.61,-4.92 -4.39,-5.17 l 0,-0.95 14,0 0,0.95 c -3.83,0.19 -4.53,0.85 -4.53,4.63 l 0,10.72 7.08,0 c 4.28,0 5.22,-0.75 5.62,-4.85 l 1.14,0 0,11.61 -1.14,0 c -0.45,-3.87 -1.44,-4.73 -5.62,-4.73 l -7.08,0 0,10.81 c 0,1.55 0.25,1.95 1.68,1.95 l 6.58,0 c 6.04,0 6.92,-0.79 7.67,-5.23 z"
              id="path4589" /><polygon
              style="fill:#000000;stroke-width:0"
-             points="692.23,418.65 682.66,395.59 685.26,395.59 695.52,418.15 695.52,419.15 685.3,441.71 682.71,441.71 "
+             points="695.52,419.15 685.3,441.71 682.71,441.71 692.23,418.65 682.66,395.59 685.26,395.59 695.52,418.15 "
              id="polygon4591" /></g></g>    </g>
     <g
        id="g4894"
