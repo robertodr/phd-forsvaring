@@ -29,26 +29,6 @@ implementation as an independent library
 ---
 layout: false
 
-## Quantum Chemistry
-
-### **Understand** and **predict** chemistry from first principles
-
-<p style="text-align:center;"><img src="images/model-chem.svg" style="width: 80%"></p>
-<p style="clear: both;">
-
-???
-
-- Quantum many-body theory applied to chemistry
-
-`$$
-H\Psi = E\Psi
-$$`
-
-- Compute molecular energies and properties
-
----
-layout: false
-
 ## The Problem of Solvation
 
 Aspects computational models need to capture
@@ -117,7 +97,7 @@ layout: false
 ## Extensible
 ### New Challenges! New Methods! New Software?!?
 
-<p style="text-align:center;"><img src="images/yoda-future.gif" style="width: 100%;"/></p>
+<p style="text-align:center;"><img src="images/yoda-future-once.gif" style="width: 100%;"/></p>
 <p style="clear: both;">
 
 ???
@@ -132,7 +112,7 @@ layout: false
 
 ## Modular
 ### Do One Thing, Do It Well
-<p style="text-align:center;"><img src="images/lego.gif" style="width: 100%"></p>
+<p style="text-align:center;"><img src="images/lego-once.gif" style="width: 100%"></p>
 <p style="clear: both;">
 
 ???
@@ -159,6 +139,26 @@ layout: false
 - Reinventing the wheel is bad
 - Build small, well-documented software components
 - Reuse components in different contexts
+
+---
+layout: false
+
+## Quantum Chemistry
+
+### **Understand** and **predict** chemistry from first principles
+
+<p style="text-align:center;"><img src="images/model-chem.svg" style="width: 80%"></p>
+<p style="clear: both;">
+
+???
+
+- Quantum many-body theory applied to chemistry
+
+`$$
+H\Psi = E\Psi
+$$`
+
+- Compute molecular energies and properties
 
 ---
 layout: false
@@ -255,11 +255,6 @@ class: split-60-40
 ## QM/Continuum: The Polarizable Continuum Model.red[<sup>2</sup>]
 
 .column[
-- Replace environment with continuum \\(\varepsilon\\)
-- Create cavity in continuum \\(\Omega_i\\)
-- Vacuum inside cavity \\(\varepsilon=1\\)
-- Solute charge density _entirely_ in \\(\Omega_i\\)
-
 ### Transmission problem
 `$$
   \begin{align}
@@ -282,6 +277,11 @@ $$`
 
 ???
 
+- Replace environment with continuum \\(\varepsilon\\)
+- Create cavity in continuum \\(\Omega_i\\)
+- Vacuum inside cavity \\(\varepsilon=1\\)
+- Solute charge density _entirely_ in \\(\Omega_i\\)
+
 - Model the solvent as a polarizable dielectric continuum
 - Parameters for the definition of the boundary, i.e. the cavity
 - Parameters describing the solvent: permittivity (static and optical)
@@ -300,25 +300,28 @@ $$`
 ---
 ## Mathematics of PCM.red[<sup>3</sup>]
 
-- Define the _reaction potential_
+- Define the .red[reaction potential]
 `$$
- u(\mathbf{r}) = \varphi(\mathbf{r}) + \xi(\mathbf{r})
- = \int_C \mathop{}\!\mathrm{d}\mathbf{r}^\prime \frac{\rho(\mathbf{r}^\prime)}{|\mathbf{r} - \mathbf{r}^\prime|} +
+ u(\mathbf{r}) = \color{blue}{\varphi(\mathbf{r})} + \color{red}{\xi(\mathbf{r})}
+ = \int_C \mathop{}\!\mathrm{d}\mathbf{r}^\prime \frac{\color{blue}{\rho(\mathbf{r}^\prime)}}{|\mathbf{r} - \mathbf{r}^\prime|} +
   \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \frac{\color{red}{\sigma(\mathbf{s})}}{|\mathbf{r} - \mathbf{s}|}
 $$`
 
-- _Apparent surface charge_ (ASC)
+- .red[Apparent surface charge (ASC)]
 `$$
-\mathcal{T}\color{red}{\sigma(\mathbf{s})} = -\mathcal{R}\color{blue}{\varphi(\mathbf{s})}
+\color{green}{\mathcal{T}}\color{red}{\sigma(\mathbf{s})} = -\color{green}{\mathcal{R}}\color{blue}{\varphi(\mathbf{s})}
 $$`
 
 - Green's functions for \\(L_\star\\) define integral operators
 
 `$$
  \begin{align}
-  (\mathcal{S}_\star f)(\mathbf{s}) &= \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime \color{red}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}f(\mathbf{s}^\prime) \\
-  (\mathcal{D}_\star f)(\mathbf{s}) &= \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}^\prime\color{red}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime) \\
-  (\mathcal{D}^\dagger_\star f)(\mathbf{s}) &= \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}\color{red}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime)
+  (\color{green}{\mathcal{S}_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime \color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}f(\mathbf{s}^\prime) \\
+  (\color{green}{\mathcal{D}_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}^\prime\color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime) \\
+  (\color{green}{\mathcal{D}^\dagger_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}\color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime)
  \end{align}
 $$`
 
@@ -340,22 +343,21 @@ $$`
 - Environments with anisotropies and nonuniformities
 `$$
 \begin{align}
-\left[\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{e}\right)\mathcal{S}_\mathrm{i} +
-      \mathcal{S}_\mathrm{e}\left(2\pi\mathcal{I} + \mathcal{D}^\dagger_\mathrm{i}\right) \right]&\color{red}{\sigma(\mathbf{s})} = \\
-&-\left[\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{e}\right) -
-\mathcal{S}_\mathrm{e}\mathcal{S}_\mathcal{i}^{-1}\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{i}\right)\right]\color{blue}{\varphi(\mathbf{s})}
+\left[\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{e}}\right)\color{green}{\mathcal{S}_\mathrm{i}} +
+      \color{green}{\mathcal{S}_\mathrm{e}}\left(2\pi\mathcal{I} + \color{green}{\mathcal{D}^\dagger_\mathrm{i}}\right) \right]&\color{red}{\sigma(\mathbf{s})} = \\
+&-\left[\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{e}}\right) -
+\color{green}{\mathcal{S}_\mathrm{e}}\color{green}{\mathcal{S}_\mathcal{i}^{-1}}\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{i}}\right)\right]\color{blue}{\varphi(\mathbf{s})}
 \end{align}
 $$`
 - Isotropic environments
 `$$
-\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right)\mathcal{I} - \mathcal{D}\right]
-\mathcal{S}\color{red}{\sigma(\mathbf{s})} = -\left( 2\pi\mathcal{I} - \mathcal{D} \right)
+\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right)\mathcal{I} - \color{green}{\mathcal{D}}\right]
+\color{green}{\mathcal{S}}\color{red}{\sigma(\mathbf{s})} = -\left( 2\pi\mathcal{I} - \color{green}{\mathcal{D}} \right)
 \color{blue}{\varphi(\mathbf{s})}
 $$`
 - Conductor-like boundary conditions
 `$$
-\mathcal{S}\color{red}{\sigma(\mathbf{s})} = -f(\varepsilon)\color{blue}{\varphi(\mathbf{s})}
-$$`
+\color{green}{\mathcal{S}}\color{red}{\sigma(\mathbf{s})} = -f(\varepsilon)\color{blue}{\varphi(\mathbf{s})}$$`
 
 <font color="red">
 <center>How to solve these? <img src="images/fearful.svg" style="width: 5%"></center>
@@ -379,7 +381,7 @@ Solution by a boundary element method (BEM) <img src="images/smiley.svg" style="
 * \\(N_\mathrm{ts}\\) finite elements on the cavity boundary
 * Form boundary integral operators
 `$$
- \mathbf{T}\color{red}{\mathbf{q}} = - \mathbf{R}\color{blue}{\mathbf{v}}
+ \color{green}{\mathbf{T}}\color{red}{\mathbf{q}} = - \color{green}{\mathbf{R}}\color{blue}{\mathbf{v}}
 $$`
 * Solve linear system
 ]
@@ -435,7 +437,7 @@ layout: false
 \frac{\mathop{}\!\mathrm{d}U_\mathrm{pol}}{\mathop{}\!\mathrm{d} F} =
 \frac{\partial U_\mathrm{pol}}{\partial F} + \cancelto{0}{\frac{\partial U_\mathrm{pol}}{\partial \mathrm{p}}\frac{\partial \mathrm{p}}{\partial F}}
 $$`
-3. .red[Valid for polarizable MM models]
+3. **Valid for polarizable MM models**
 4. Extended Lagrangian dynamics
 
 
@@ -445,7 +447,7 @@ $$`
 
 Classical polarization energy of mixed discrete-continuum system.
 `$$
-U_\mathrm{pol}[\mathrm{p}] = \frac{1}{2}{}^t\mathrm{p}\mathbb{V}\mathrm{p} + {}^t\mathrm{p}\mathrm{s}
+U_\mathrm{pol}[\mathrm{p}] = \frac{1}{2}\mathrm{p}\mathbb{V}\mathrm{p} + \mathrm{p}\mathrm{s}
 $$`
 - p is the polarization degree of freedom
 - s is the source term
@@ -458,17 +460,17 @@ layout: false
 
 ## Self-Consistent Field with PCM
 
-* _Molecular electrostatic potential_ (MEP):
+* .blue[Molecular electrostatic potential (MEP)]
   `$$
   \varphi(\mathbf{s}) = \sum_{\kappa\lambda}^{N_\mathrm{AO}} \color{blue}{\varphi_{\kappa\lambda}(\mathbf{s})} D_{\lambda\kappa},
   \quad
   \color{blue}{\varphi_{\kappa\lambda}(\mathbf{s}) }= \int\mathop{}\!\mathrm{d}\mathbf{r} \frac{-\chi^*_\kappa(\mathbf{r})\chi_\lambda(\mathbf{r}) }{|\mathbf{r} - \mathbf{s}|}
   $$`
-* _Apparent surface charge_ (ASC):
+* .red[Apparent surface charge (ASC)]
   `$$
-   \mathcal{T}\color{red}{\sigma(\mathbf{s})} = - \mathcal{R}\color{blue}{\varphi(\mathbf{s})}
+   \color{green}{\mathcal{T}}\color{red}{\sigma(\mathbf{s})} = - \color{green}{\mathcal{R}}\color{blue}{\varphi(\mathbf{s})}
   $$`
-* Fock matrix:
+* Fock matrix
   `$$
    f_{\kappa\lambda} =
    f^\mathrm{vac}_{\kappa\lambda} +
@@ -480,47 +482,6 @@ layout: false
 <p style="clear: both;">
 
 ???
-
----
-
-layout: false
-class: split-50-50
-
-## Modularity: Do One Thing, Do It Well
-
-.column[
-### Coupling
-- Strong
-<p style="text-align:center;"><img src="images/strong-coupling.svg" style="width: 45%"></p>
-- .red[Loose]
-<p style="text-align:center;"><img src="images/loose-coupling.svg" style="width: 45%"></p>
-]
-.column[
-### Cohesion
-- Low
-<p style="text-align:center;"><img src="images/low-cohesion.svg" style="width: 15%"></p>
-- .red[High]
-<p style="text-align:center;"><img src="images/high-cohesion.svg" style="width: 10%"></p>
-]
-<p style="clear: both;">
-
-.footnote[Reproduced, with modifications, from [Library design the hard way](http://cicero.xyz/v2/remark/github/bast/talk-library-design/master/talk.mkd/#1)]
-
-???
-
-- Coupling
-    - Assemble/deassemble/reassemble
-    - Reason about/understand the code
-
-- Low cohesion: difficult to maintain, test, reuse, or even understand
-    - Non-cohesive code has unnecessary dependencies
-    - Swiss army knife modules
-
-- High cohesion: associated with robustness, reliability, reusability, and understandability
-    - Do one thing only and do it well
-    - API of cohesive code changes less over time
-    - Power of the Unix command line is a set of highly cohesive tools
-    - Microservices
 
 ---
 
@@ -544,7 +505,7 @@ applications._
 * __Documentation__ let others know what you can do
 * __Versioning__ what changed?
 * __Testing__ did you mess up?
-<p style="text-align:center;"><img src="images/stranger-in-the-alps.gif" style="width: 45%;"/></p>
+<p style="text-align:center;"><img src="images/stranger-in-the-alps-twice.gif" style="width: 45%;"/></p>
 <p style="clear: both;">
 * __Building__ can it stand on its own feet?
 * __Deploying__ get it out in the open!
@@ -592,6 +553,22 @@ applications._
 
 .footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
+???
+
+- Coupling
+    - Assemble/deassemble/reassemble
+    - Reason about/understand the code
+
+- Low cohesion: difficult to maintain, test, reuse, or even understand
+    - Non-cohesive code has unnecessary dependencies
+    - Swiss army knife modules
+
+- High cohesion: associated with robustness, reliability, reusability, and understandability
+    - Do one thing only and do it well
+    - API of cohesive code changes less over time
+    - Power of the Unix command line is a set of highly cohesive tools
+    - Microservices
+
 ---
 
 ## PCMSolver: An API for the PCM.red[<sup>7</sup>]
@@ -638,7 +615,7 @@ layout: false
 
 ## One PCM to rule them all
 
-<p style="text-align:center;"><img src="images/boromir-ring.gif" style="width: 70%"></p>
+<p style="text-align:center;"><img src="images/boromir-ring-once.gif" style="width: 70%"></p>
 <p style="clear: both;">
 
 ### Currently interfaced programs
@@ -808,8 +785,8 @@ $$
 \langle\mathrm{HF} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
   &+\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
   +U_\mathrm{pol}^\mathrm{ref} \\
-+\frac{1}{2}{}^t\color{red}{\mathrm{p}}\mathbb{V}\color{red}{\mathrm{p}} &+
-{}^t\color{red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{blue}{t},\color{green}{\bar{t}})_\mathcal{M}
++\frac{1}{2}\color{red}{\mathrm{p}}\mathbb{V}\color{red}{\mathrm{p}} &+
+\color{red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{blue}{t},\color{green}{\bar{t}})_\mathcal{M}
 \end{align}
 $$
 `
@@ -830,11 +807,11 @@ layout: false
 $$
 \begin{align}
  &\epsilon_{\mu_q}\color{blue}{t_{\mu_q}} +\langle\mu_q | \color{blue}{\overline{\Phi}} | \mathrm{HF}\rangle
- +{}^t\color{red}{\mathrm{p}}\langle\mu_q | \color{blue}{\overline{\mathrm{s}}} | \mathrm{HF}\rangle = 0 \\
+ +\color{red}{\mathrm{p}}\langle\mu_q | \color{blue}{\overline{\mathrm{s}}} | \mathrm{HF}\rangle = 0 \\
  &\epsilon_{\mu_q}\color{green}{\bar{t}_{\mu_q}}
   +\langle\mathrm{HF} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle
   +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
-  &+{}^t\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
+  &+\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
   +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
   +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [[\mathrm{s}, \color{blue}{T}], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
   &\mathbb{V}\color{red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{blue}{t}, \color{green}{\bar{t}})_\mathcal{M} = 0
@@ -873,7 +850,7 @@ layout: false
 $$
   G_{\Lambda(\text{T})}
   =\sum_{u=1}^2\langle\color{green}{\bar{t}_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
-    +{}^t\color{red}{\mathrm{p}^{*}}\langle\color{green}{\bar{t}_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +\color{red}{\mathrm{p}^{*}}\langle\color{green}{\bar{t}_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
 $$
 `
 #### PTED-CCSD(T)
@@ -882,7 +859,11 @@ $$
 $$
   G_{(\text{T})}
   =\sum_{u=1}^2\langle\color{blue}{t_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
-    +{}^t\color{red}{\mathrm{p}^{*}}\langle\color{blue}{t_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +\color{red}{
+  \mathrm{p} ^ { * }}\langle\color{blue}{t_{2}^{
+  *}} | [\mathrm{s}, \color{blue}{T_3^{
+  *}}] | \mathrm{
+  HF}\rangle
 $$
 `
 ]
@@ -901,10 +882,16 @@ layout: false
 <p style="clear: both;">
 
 `$$
-\mathbf{F} = \begin{pmatrix}
-\mathbf{F}^{LL, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{LS, \mathrm{vac}} \\
-\mathbf{F}^{SL, \mathrm{vac}} & \mathbf{F}^{SS, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{SS}
-\end{pmatrix}
+\mathbf{F} = \begin{
+  pmatrix}
+\mathbf{F}^{LL, \mathrm{vac}} + \mathbf{
+  q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{
+  LS, \mathrm { vac }} \\
+\mathbf{F}^{SL, \mathrm{vac}} & \mathbf{F}^{SS, \mathrm{vac}} + \mathbf{
+  q}\cdot\mathbf{v}^{
+  SS}
+\end{
+  pmatrix}
 $$`
 
 ???
@@ -936,41 +923,68 @@ layout: false
 <p style="clear: both;">
 
 `$$
-\begin{align}
-g_{uv}   = \frac{2c} {\langle \tilde{S}_v \rangle} \,
-           \mathrm{Tr} \left\{
-           \mathbf{\Lambda}_{B_u} \mathbf{D}^{(J_v)}
+\begin{
+  align}
+g_{uv}   = \frac{2c} {
+  \langle \tilde { S }
+  _v \rangle} \,
+           \mathrm{
+  Tr} \left\{
+           \mathbf{\Lambda}_{B_u} \mathbf{D}^{
+  (J_v)}
                        \right\},
 \quad&\quad
-  \left(\mathbf{\Lambda}_{B_u}\right)_{\lambda\tau} = \frac{1}{2}
+  \left(\mathbf{
+  \Lambda}_{
+  B_u}\right)_{\lambda\tau} = \frac{1}{
+  2}
   \left\langle
-       \mathbf{X}_\lambda
+       \mathbf{
+  X}_\lambda
        |
-       \left( \mathbf{r}_{G} \times \mathbf{\alpha} \right)_u
+       \left( \mathbf{
+  r}_{
+  G} \times \mathbf{
+  \alpha} \right)_u
        |
-       \mathbf{X}_\tau
+       \mathbf{
+  X}_\tau
   \right\rangle.
 \\
-A^M_{uv} = \frac{1} {\langle \tilde{S}_v \rangle} \,
-           \mathrm{Tr} \left\{
-           \mathbf{\Lambda}_{I^M_u} \mathbf{D}^{(J_v)}
+A^M_{uv} = \frac{1} {
+  \langle \tilde { S }
+  _v \rangle} \,
+           \mathrm{
+  Tr} \left\{
+           \mathbf{\Lambda}_{I^M_u} \mathbf{D}^{
+  (J_v)}
                        \right\},
 \quad&\quad
-\left(\mathbf{\Lambda}^{\mathrm{PN}}_{I^M_u}\right)_{\lambda\tau}
+\left(\mathbf{\Lambda}^{
+  \mathrm { PN }}_{
+  I ^ M_u}\right)_{\lambda\tau}
     = \gamma^M
     \left\langle
-       \mathbf{X}_\lambda
+       \mathbf{
+  X}_\lambda
        \left|
           \left(
-          \frac{\mathbf{r}_{M} \times \mathbf{\alpha}}{r^{3}_{M}}
+          \frac{\mathbf{r}_{M} \times \mathbf{\alpha}}{
+  r ^ { 3 } _ { M }}
           \right)_u
        \right|
-       \mathbf{X}_\tau
+       \mathbf{
+  X}_\tau
     \right\rangle
 \\
-\delta_M^\mathrm{para} &= \frac{\mu_e}{12\gamma^MkT} \,
-                        \text{Tr} \left( \mathbf{g}\mathbf{A}^\mathrm{T}_M \right)
-\end{align}
+\delta_M^\mathrm{para} &= \frac{\mu_e}{
+  12\gamma ^ MkT} \,
+                        \text{
+  Tr} \left( \mathbf{
+  g}\mathbf{A}^\mathrm{
+  T}_M \right)
+\end{
+  align}
 $$`
 
 - Expectation values
@@ -1029,16 +1043,22 @@ $$
 $$
   G(\mathbf{r}, \mathbf{r}^\prime) =\frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)} + G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
   =
-  \begin{cases}
+  \begin{
+  cases}
     \sum_{\ell=0}^\infty
-    \frac{-(2\ell+1)}{r^{\prime 2}\varepsilon(r^\prime)}
-    \frac{u_\ell(r)v_\ell(r^\prime)}{W_\ell(r^\prime)}
+    \frac{-(2\ell+1)}{
+  r ^ { \prime 2 }\varepsilon(r ^\prime)}
+    \frac{u_\ell(r)v_\ell(r^\prime)}{
+  W_\ell(r ^\prime)}
     P_\ell(\cos\gamma),\,\text{for}\,\, r<r^\prime \\
    \sum_{\ell=0}^\infty
-   \frac{-(2\ell+1)}{r^{\prime 2}\varepsilon(r^\prime)}
-   \frac{u_\ell(r^\prime)v_\ell(r)}{W_\ell(r^\prime)}
+   \frac{-(2\ell+1)}{
+  r ^ { \prime 2 }\varepsilon(r ^\prime)}
+   \frac{u_\ell(r^\prime)v_\ell(r)}{
+  W_\ell(r ^\prime)}
     P_\ell(\cos\gamma),\,\text{for}\,\, r>r^\prime
-  \end{cases}
+  \end{
+  cases}
 $$
 `
 
@@ -1337,6 +1357,9 @@ layout: false
 layout: false
 
 ## Acknowldegements
+
+<p style="text-align:center;"><img src="images/acknowledgements-once.gif" style="width: 50%"></p>
+<p style="clear: both;">
 
 - Luca Frediani (CTCC, University of Tromsø)
 - Benedetta Mennucci (Università di Pisa)
