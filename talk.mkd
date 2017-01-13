@@ -97,24 +97,19 @@ layout: false
 
 ## Viral!
 ### Software Development Is Essential to Quantum Chemistry
-<p style="text-align:center;"><img src="images/viral.svg" style="width: 80%"></p>
+<p style="text-align:center;"><img src="images/viral.svg" style="width: 100%"></p>
 <p style="clear: both;">
-
-- Fast development
-- Reproducibility.red[<sup>1</sup>]
-
-.footnote[.red[<sup>1</sup>] Hatton, L.; Warr, G. [arXiv [q-bio.QM]](https://arxiv.org/abs/1608.06897), (2016)]
 
 ???
 
 - Software development in essential to quantum chemistry.
-- New modelling challenges require new (or improved) methods and new (or
-  improved) software implementations.
 - Software architecture must allow fast development of new methods. We want to
   solve physical problems, not software engineering problems.
 - The central tenet of the scientific method is reproducibility. Our work is
   based on models and their computer simulation, these must be reproducible
-  too.
+  too.red[<sup>1</sup>]
+
+.footnote[.red[<sup>1</sup>] Hatton, L.; Warr, G. [arXiv [q-bio.QM]](https://arxiv.org/abs/1608.06897), (2016)]
 
 ---
 layout: false
@@ -125,20 +120,25 @@ layout: false
 <p style="text-align:center;"><img src="images/yoda-future.gif" style="width: 100%;"/></p>
 <p style="clear: both;">
 
+???
+
+- New modelling challenges require new (or improved) methods and new (or
+  improved) software implementations.
+- Software cannot be rewritten from scratch every time, we need to have
+  _extensible_ architectures
+
 ---
 layout: false
 
 ## Modular
 ### Do One Thing, Do It Well
-<p style="text-align:center;"><img src="images/lego.gif" style="width: 70%"></p>
+<p style="text-align:center;"><img src="images/lego.gif" style="width: 100%"></p>
 <p style="clear: both;">
-
-- Delimit capabilities, concerns, results
-- LEGO-like software
 
 ???
 
 - Fast-paced development cycles can only occur within a clear software structure
+- Delimit capabilities, concerns, results
 - Modularity can help create such a structure
 - A LEGO-like structure can enhance our capabilities to reason about complex software workflows.
 - Assemble, de-assemble, re-assemble is easier with standalone modules.
@@ -198,7 +198,7 @@ class: center, middle, inverse
 ---
 layout: false
 class: split-50-50
-## Quantum/Classical Multiscale Models.red[<sup>2</sup>]
+## Quantum/Classical Multiscale Models.red[<sup>1</sup>]
 
 - Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
@@ -212,7 +212,7 @@ class: split-50-50
 <p style="text-align:center;"><img src="images/pyridine+water_12AA_QMMM.png" style="width: 50%"></p>
 <p style="clear: both;">
 ]
-.footnote[.red[<sup>2</sup>] Senn, H. M.; Thiel, W. _Angew. Chem. Int. Ed._ (2009), __48__, 1198]
+.footnote[.red[<sup>1</sup>] Senn, H. M.; Thiel, W. _Angew. Chem. Int. Ed._ (2009), __48__, 1198]
 
 ???
 
@@ -223,25 +223,28 @@ class: split-50-50
 layout: false
 class: split-60-40
 
-## QM/Continuum.red[<sup>3</sup>]
+## QM/Continuum.red[<sup>2</sup>]
 
 - Use **quantum** and **classical** physics together
   * quantum for chemically relevant subsystem
   * _continuum dielectric_ for the environment
 
 .column[
+.red[Pros]
 - **Exact** electrostatics
 - Self-consistent polarization
-- **No** chemical detail
-- Dispersion and repulsion approximate
 - Statistically averaged _by construction_
+
+.red[Cons]
+- **No** chemical detail in the environment
+- Dispersion and repulsion approximate
 ]
 .column[
 <p style="text-align:right;"><img src="images/pyridine_Continuum.png" style="width: 40%"></p>
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>3</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
+.footnote[.red[<sup>2</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
 
 ???
 
@@ -249,7 +252,7 @@ class: split-60-40
 layout: false
 class: split-60-40
 
-## QM/Continuum: The Polarizable Continuum Model.red[<sup>3</sup>]
+## QM/Continuum: The Polarizable Continuum Model.red[<sup>2</sup>]
 
 .column[
 - Replace environment with continuum \\(\varepsilon\\)
@@ -275,7 +278,7 @@ $$`
 <p style="clear: both;">
 ]
 
-.footnote[.red[<sup>3</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
+.footnote[.red[<sup>2</sup>] Tomasi, J.; Mennucci, B.; Cammi, R. _Chem. Rev._ (2005), __105__, 2999]
 
 ???
 
@@ -295,7 +298,7 @@ $$`
 * Neumann condition: \\([\partial_L u] (\mathbf{s})\\)
 
 ---
-## Mathematics of PCM.red[<sup>4</sup>]
+## Mathematics of PCM.red[<sup>3</sup>]
 
 - Define the _reaction potential_
 `$$
@@ -306,7 +309,7 @@ $$`
 
 - _Apparent surface charge_ (ASC)
 `$$
-\mathcal{T}\color{red}{\sigma} = -\mathcal{R}\color{blue}{\varphi}
+\mathcal{T}\color{red}{\sigma(\mathbf{s})} = -\mathcal{R}\color{blue}{\varphi(\mathbf{s})}
 $$`
 
 - Green's functions for \\(L_\star\\) define integral operators
@@ -319,7 +322,7 @@ $$`
  \end{align}
 $$`
 
-.footnote[.red[<sup>4</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
+.footnote[.red[<sup>3</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
 
 ???
 
@@ -332,25 +335,26 @@ $$`
 
 ---
 
-## A PCM for All Seasons.red[<sup>4</sup>]
+## A PCM for All Seasons.red[<sup>3</sup>]
 
-Green's functions for \\(L_\star\\) define integral operators:
-- Environments with anisotropies and nonuniformities:
+- Environments with anisotropies and nonuniformities
 `$$
+\begin{align}
 \left[\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{e}\right)\mathcal{S}_\mathrm{i} +
-      \mathcal{S}_\mathrm{e}\left(2\pi\mathcal{I} + \mathcal{D}^\dagger_\mathrm{i}\right) \right]\color{red}{\sigma} =
--\left[\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{e}\right) -
-\mathcal{S}_\mathrm{e}\mathcal{S}_\mathcal{i}^{-1}\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{i}\right)\right]\color{blue}{\varphi}
+      \mathcal{S}_\mathrm{e}\left(2\pi\mathcal{I} + \mathcal{D}^\dagger_\mathrm{i}\right) \right]&\color{red}{\sigma(\mathbf{s})} = \\
+&-\left[\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{e}\right) -
+\mathcal{S}_\mathrm{e}\mathcal{S}_\mathcal{i}^{-1}\left(2\pi\mathcal{I} - \mathcal{D}_\mathrm{i}\right)\right]\color{blue}{\varphi(\mathbf{s})}
+\end{align}
 $$`
-- Isotropic environments:
+- Isotropic environments
 `$$
-\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right) - \mathcal{D}\right]
-\mathcal{S}\color{red}{\sigma} = -\left( 2\pi - \mathcal{D} \right)
-\color{blue}{\varphi}
+\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right)\mathcal{I} - \mathcal{D}\right]
+\mathcal{S}\color{red}{\sigma(\mathbf{s})} = -\left( 2\pi\mathcal{I} - \mathcal{D} \right)
+\color{blue}{\varphi(\mathbf{s})}
 $$`
-- Conductor-like boundary conditions:
+- Conductor-like boundary conditions
 `$$
-\mathcal{S}\color{red}{\sigma} = -f(\varepsilon)\color{blue}{\varphi}
+\mathcal{S}\color{red}{\sigma(\mathbf{s})} = -f(\varepsilon)\color{blue}{\varphi(\mathbf{s})}
 $$`
 
 <font color="red">
@@ -358,7 +362,7 @@ $$`
 </font>
 <p style="clear: both;">
 
-.footnote[.red[<sup>4</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
+.footnote[.red[<sup>3</sup>] Cancès, E.; Mennucci, B. _J. Math. Chem._ (1998), __23__, 309]
 
 ???
 
@@ -366,7 +370,7 @@ $$`
 layout: false
 class: split-70-30
 
-## Boundary element method and PCM.red[<sup>5</sup>]
+## Boundary Element Method and PCM.red[<sup>4</sup>]
 
 .column[
 Solution by a boundary element method (BEM) <img src="images/smiley.svg" style="width: 5%">
@@ -387,7 +391,7 @@ $$`
 - Similar equation for IEF-PCM, isotropic PCM and COSMO
 - _Independent_ of QM method!
 
-.footnote[.red[<sup>5</sup>] Ern, A; Guermond, J.-L. _Theory and Practice of Finite Elements_, Springer, 2004]
+.footnote[.red[<sup>4</sup>] Ern, A; Guermond, J.-L. _Theory and Practice of Finite Elements_, Springer, 2004]
 
 ???
 
@@ -397,30 +401,32 @@ $$`
 ---
 layout: false
 
-## Variational Formulation of the PCM.red[<sup>6</sup>]
+## Variational Formulation of the PCM.red[<sup>5</sup>]
 
-Find \\(\sigma(\mathbf{s})\\) minimizing:
+Find \\(\color{red}{\sigma(\mathbf{s})}\\) minimizing
 `$$
-U_\mathrm{PCM}[\sigma(\mathbf{s})] = \color{red}{\frac{1}{2} \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \sigma(\mathbf{s})[\mathcal{R}^{-1}\mathcal{T}]\sigma(\mathbf{s})} + \color{blue}{\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \varphi(\mathbf{s})\sigma(\mathbf{s})}
+U_\mathrm{PCM}[\color{red}{\sigma(\mathbf{s})}]
+=\frac{1}{2}\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{red}{\sigma(\mathbf{s})} \color{green}{[\mathcal{R}^{-1}\mathcal{T}]} \color{red}{\sigma(\mathbf{s})}
++\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{blue}{\varphi(\mathbf{s})}\color{red}{\sigma(\mathbf{s})}
 $$`
 
-1. Physically meaningful:
-   - .red[Unfavourable] self-interaction of \\(\sigma(\mathbf{s})\\)
-   - .blue[Favourable] interaction of \\(\sigma(\mathbf{s})\\) and  \\(\varphi(\mathbf{s})\\)
+1. Physically meaningful
+   - Unfavourable self-interaction of \\(\color{red}{\sigma(\mathbf{s})}\\)
+   - Favourable interaction of \\(\color{red}{\sigma(\mathbf{s})}\\) and  \\(\color{blue}{\varphi(\mathbf{s})}\\)
 
 2. Equilibrium values are energies
 3. Convexity
 
-.footnote[.red[<sup>6</sup>] Lipparini, F. _et al._ _J. Chem. Phys._ (2010), __133__, 014106]
+.footnote[.red[<sup>5</sup>] Lipparini, F. _et al._ _J. Chem. Phys._ (2010), __133__, 014106]
 
 ???
 
 ---
 layout: false
 
-## Variational Advantages.red[<sup>7</sup>]
+## Variational Advantages.red[<sup>6</sup>]
 
-<p style="text-align:center;"><img src="images/variational-brain.png" style="width: 80%"></p>
+<p style="text-align:center;"><img src="images/variational-brain.png" style="width: 85%"></p>
 <p style="clear: both;">
 
 1. Avoids nonlinear couplings in the QM Hamiltonian
@@ -433,7 +439,7 @@ $$`
 4. Extended Lagrangian dynamics
 
 
-.footnote[.red[<sup>7</sup>] Lipparini, F. _et al._ _J. Chem. Theory Comput._ (2015), __11__, 623]
+.footnote[.red[<sup>6</sup>] Lipparini, F. _et al._ _J. Chem. Theory Comput._ (2015), __11__, 623]
 
 ???
 
@@ -576,7 +582,7 @@ applications._
 
 ---
 
-## PCMSolver: An API for the PCM.red[<sup>8</sup>]
+## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
 - Open-source [LGPLv3](https://www.gnu.org/copyleft/lesser.html)-licensed
 - Developed on [GitHub](https://github.com/PCMSolver/pcmsolver)
@@ -584,11 +590,11 @@ applications._
 <p style="text-align:center;"><img src="images/pcmsolver-scheme.png" style="width: 60%"></p>
 <p style="clear: both;">
 
-.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 
-## PCMSolver: An API for the PCM.red[<sup>8</sup>]
+## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
 - Capabilities
   * Traditional collocation solvers
@@ -604,11 +610,11 @@ applications._
   * Pure C for interoperability
   * Fortran bindings built on-demand
 
-.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 
-## PCMSolver: An API for the PCM.red[<sup>8</sup>]
+## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
 - Testing
   * Use [Catch](https://github.com/philsquared/Catch) C++ framework
@@ -625,15 +631,15 @@ applications._
   * Sphinx for users and programmers documentation
   * Served on [ReadTheDocs](https://readthedocs.org/)
 
-.footnote[.red[<sup>8</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
+.footnote[.red[<sup>7</sup>] Find it at [pcmsolver.readthedocs.io](http://pcmsolver.readthedocs.io/en/latest/) and [github.com/PCMSolver/pcmsolver](https://github.com/PCMSolver/pcmsolver)]
 
 ---
 layout: false
-class: split-50-50
 
 ## One PCM to rule them all
 
-.column[
+<p style="text-align:center;"><img src="images/boromir-ring.gif" style="width: 70%"></p>
+<p style="clear: both;">
 
 ### Currently interfaced programs
 
@@ -643,18 +649,14 @@ class: split-50-50
 - DIRAC
 - ReSpect
 - KOALA
-]
-.column[
-<p style="text-align:center;"><img src="images/boromir-ring.gif" style="width: 50%"></p>
-<p style="clear: both;">
-]
+
+???
 
 ### What's in it for us?
 
 - Separation of concerns
 - Leveraging functionality
 
-???
 
 ## Interfaces to QM programs
 
@@ -798,7 +800,7 @@ T = \sum_{u=1}^\mathcal{M} T_u = \sum_{u=1}^\mathcal{M}\sum_{\mu_u}t_{\mu_u}\tau
 $$
 `
 
-- PCM-CC _effective_ Lagrangian
+### PCM-CC _effective_ Lagrangian
 `
 $$
 \begin{align}
@@ -895,7 +897,9 @@ layout: false
 
 ## Solvation in the Relativistic Regime
 
-<div class="imageWrapper">
+<p style="text-align:left;"><img src="images/hamilton-attack.png" style="width: 65%"></p>
+<p style="clear: both;">
+
 `$$
 \mathbf{F} = \begin{pmatrix}
 \mathbf{F}^{LL, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{LS, \mathrm{vac}} \\
@@ -903,16 +907,25 @@ layout: false
 \end{pmatrix}
 $$`
 
---
-  <img class="overlayImage" src="images/paper-i.png" style="width: 85%" align="center">
-</div>
+???
 
-<p style="text-align:center;"><img src="images/rela-mep.png" style="width: 80%"></p>
+Attacking the Hamiltonian axis
+
+---
+layout: false
+
+## Solvation in the Relativistic Regime
+
+<p style="text-align:center;"><img src="images/paper-i.png" style="width: 80%"></p>
+<p style="clear: both;">
+
+<p style="text-align:center;"><img src="images/rela-mep.png" style="width: 90%"></p>
 <p style="clear: both;">
 
 ???
 
 Attacking the Hamiltonian axis
+
 
 ---
 layout: false
@@ -982,25 +995,6 @@ layout: false
 
 ## Spherical Diffuse Interfaces
 
-- Modelling of nonhomogeneous environments
-  - Surface enhanced spectroscopies
-  - QM/MM only recently, for planar interfaces
-
-- Continuum approach: consider a spatially varying permittivity
-  - Numerical Green's function
-
-???
-
-- Interfaces are ubiquitous
-- We want to be able to treat chemistry and physics at interfaces, e.g.
-  adsorption phenomena, surface enhanced spectroscopies.
-- Some spectroscopic phenomena are relevant in symmetry-broken environments (SHG)
-
----
-layout: false
-
-## Spherical Diffuse Interfaces
-
 <p style="text-align:center;"><img src="images/paper-iii.png" style="width: 100%"></p>
 <p style="clear: both;">
 
@@ -1009,11 +1003,12 @@ layout: false
 
 ???
 
-- Interfaces are ubiquitous
-- We want to be able to treat chemistry and physics at interfaces, e.g.
-  adsorption phenomena, surface enhanced spectroscopies.
-- Some spectroscopic phenomena are relevant in symmetry-broken environments (SHG)
+- Modelling of nonhomogeneous environments
+  - Surface enhanced spectroscopies
+  - QM/MM only recently, for planar interfaces
 
+- Continuum approach: consider a spatially varying permittivity
+  - Numerical Green's function
 
 ---
 layout: false
@@ -1161,7 +1156,7 @@ $$`
  - Symmetry-breaking
  - Convergence not ensured
 
-**Wavelet Galerkin BEM**
+**Galerkin BEM**
 `$$
 A_{ij} = \int_{\Pi_i}\left(\int_{\Pi_j} k_A(\mathbf{s}, \mathbf{s}^\prime)\mathop{}\!\mathrm{d}\mathbf{s}^\prime\right)\mathop{}\!\mathrm{d}\mathbf{s},
 \quad g_i = \int_{\Pi_i}g(\mathbf{s})\mathop{}\!\mathrm{d}\mathbf{s}
@@ -1184,6 +1179,7 @@ class: split-60-40
 <p style="clear: both;">
 ]
 .column[
+**_Wavelet_ Galerkin BEM**
 - _Linear_ space requirements
 - _Linear_ time requirements
 - _Guaranteed_ accuracy
