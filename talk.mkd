@@ -1342,7 +1342,7 @@ layout: false
 
 ## Acknowldegements
 
-- Luca Frediani (CTCC)
+- Luca Frediani (CTCC, University of Tromsø)
 - Benedetta Mennucci (Università di Pisa)
 - Radovan Bast (University of Tromsø)
 - Filippo Lipparini (University of Mainz)
