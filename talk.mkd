@@ -132,7 +132,7 @@ layout: false
 <p style="text-align:center;"><img src="images/reinvent-wheel.gif" style="width: 100%;"/></p>
 <p style="clear: both;">
 
-.footnote-cite[Image: [IBM Big Data & Analytics Hub](http://www.ibmbigdatahub.com/blog/dont-reinvent-wheel-increase-productivity-strategic-reuse)]
+.footnote-cite[Source: [IBM Big Data & Analytics Hub](http://www.ibmbigdatahub.com/blog/dont-reinvent-wheel-increase-productivity-strategic-reuse)]
 
 ???
 
@@ -426,7 +426,7 @@ $$`
 ---
 layout: false
 
-## Variational Advantages.red[<sup>6</sup>]
+## The Importance of Being Variational.red[<sup>6</sup>]
 
 <p style="text-align:center;"><img src="images/variational-brain.png" style="width: 85%"></p>
 <p style="clear: both;">
@@ -435,7 +435,8 @@ layout: false
 2. _Classical_ Hellmann-Feynman theorem
 `$$
 \frac{\mathop{}\!\mathrm{d}U_\mathrm{pol}}{\mathop{}\!\mathrm{d} F} =
-\frac{\partial U_\mathrm{pol}}{\partial F} + \cancelto{0}{\frac{\partial U_\mathrm{pol}}{\partial \mathrm{p}}\frac{\partial \mathrm{p}}{\partial F}}
+\frac{\partial U_\mathrm{pol}}{\partial F}
++\cancelto{0}{\frac{\partial U_\mathrm{pol}}{\partial \color{Red}{\mathrm{p}}}\frac{\partial \color{Red}{\mathrm{p}}}{\partial F}}
 $$`
 3. **Valid for polarizable MM models**
 4. Extended Lagrangian dynamics
@@ -448,7 +449,7 @@ _J. Chem. Theory Comput._ (2015), __11__, 623]
 
 Classical polarization energy of mixed discrete-continuum system.
 `$$
-U_\mathrm{pol}[\mathrm{p}] = \frac{1}{2}\mathrm{p}\mathbb{V}\mathrm{p} + \mathrm{p}\mathrm{s}
+U_\mathrm{pol}[\mathrm{p}] = \frac{1}{2}\mathrm{p}\color{Green}{\mathbb{V}}\mathrm{p} + \mathrm{p}\mathrm{s}
 $$`
 - p is the polarization degree of freedom
 - s is the source term
@@ -794,7 +795,7 @@ $$
 \langle\mathrm{HF} | \color{Blue}{\overline{H}} | \mathrm{HF}\rangle
   &+\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | \color{Blue}{\overline{H}} | \mathrm{HF}\rangle
   +U_\mathrm{pol}^\mathrm{ref} \\
-+\frac{1}{2}\color{Red}{\mathrm{p}}\mathbb{V}\color{Red}{\mathrm{p}} &+
++\frac{1}{2}\color{Red}{\mathrm{p}}\color{Green}{\mathbb{V}}\color{Red}{\mathrm{p}} &+
 \color{Red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{Blue}{t},\color{Green}{\bar{t}})_\mathcal{M}
 \end{align}
 $$
@@ -822,7 +823,7 @@ $$
   &+\color{Red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
   +\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
   +\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | [[\mathrm{s}, \color{Blue}{T}], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
-  &\mathbb{V}\color{Red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{Blue}{t}, \color{Green}{\bar{t}})_\mathcal{M} = 0
+  &\color{Green}{\mathbb{V}}\color{Red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{Blue}{t}, \color{Green}{\bar{t}})_\mathcal{M} = 0
 \end{align}
 $$
 `
@@ -1217,53 +1218,53 @@ layout: false
 
 `
 $$
- \tilde{L}^a(\tilde{\mathbf{D}}, \color{Red}{\tilde{\sigma}}, t)
+ \tilde{L}^a(\tilde{\mathbf{D}}, \color{Red}{\tilde{\mathrm{p}}}, t)
  \overset{\lbrace\text{Tr}\rbrace_T}{=}
- \color{Green}{\tilde{\mathcal{G}}^{00,a}} - \tilde{\mathbf{S}}^a\tilde{\mathbf{W}}
+ \tilde{\mathcal{G}}^{00,a} - \tilde{\mathbf{S}}^a\tilde{\mathbf{W}}
 $$
 `
 
-- Fixed cavity approximation
+**Fixed cavity approximation**
 `
 $$
-\color{Green}{\tilde{\mathcal{G}}^{00,a}}(\tilde{\mathbf{D}}, \color{Red}{\tilde{\sigma}}, t)
+\tilde{\mathcal{G}}^{00,a}(\tilde{\mathbf{D}}, \color{Red}{\tilde{\mathrm{p}}}, t)
 \overset{\text{Tr}}{=}
 (\tilde{\mathbf{h}}^a + \tilde{\mathbf{V}}^{t,a} +
 \frac{1}{2}\tilde{\mathbf{G}}^{\gamma, a}(\tilde{\mathbf{D}}) +
 \tilde{\mathbf{F}}^{\Omega_a}_\mathrm{xc}
 -\frac{\mathrm{i}}{2}\tilde{\mathbf{T}}^a)\tilde{\mathbf{D}} + h_\mathrm{nuc}^a
-+\color{Red}{\tilde{\sigma}\tilde{\mathbf{\varphi}}^a\tilde{\mathbf{D}}}
++\color{Red}{\tilde{\mathrm{p}}}\color{Blue}{\tilde{\mathbf{\mathrm{s}}}^a}\tilde{\mathbf{D}}
 $$
 `
 
-- Response functions
+**Response functions**
 `
 $$
 \langle\langle A; B \rangle\rangle_{\omega_b} =
     L^{ab}
  \overset{\lbrace\text{Tr}\rbrace_T}{=}
-\color{Green}{\mathcal{G}^{00,ab}}
-+\mathcal{G}^{10,a}\color{Blue}{\mathbf{D}^{b}}
-+\mathcal{G}^{01,a}\color{Red}{\sigma^{b}}
+\mathcal{G}^{00,ab}
++\mathcal{G}^{10,a}\mathbf{D}^{b}
++\mathcal{G}^{01,a}\color{Red}{\mathrm{p}^{b}}
 -\mathbf{S}^{ab}\mathbf{W} - \mathbf{S}^{a}\mathbf{W}^{b}
 $$
 `
 
-- PCM response equation
+**PCM response equation**
 `
 $$
 \begin{alignat*}{2}
-  \mathcal{R}^{-1}\mathcal{T}\color{Blue}{\sigma_\mathrm{H}^{b_N}}
-  +\text{Tr}\mathbf{\varphi}\color{Blue}{\mathbf{D}_\mathrm{H}^{b_N}} = 0
+  \mathcal{R}^{-1}\mathcal{T}\color{SkyBlue}{\mathrm{p}_\mathrm{H}^{b_N}}
+  +\text{Tr}\mathbf{\varphi}\color{SkyBlue}{\mathbf{D}_\mathrm{H}^{b_N}} = 0
   \quad&\quad
-  \mathcal{R}^{-1}\mathcal{T}\color{Orange}{\sigma_\mathrm{P}^{b_N}}
+  \mathcal{R}^{-1}\mathcal{T}\color{Orange}{\mathrm{p}_\mathrm{P}^{b_N}}
   +\text{Tr}\mathbf{\varphi}\color{Orange}{\mathbf{D}_\mathrm{P}^{b_N}} =
-  \color{Orange}{\Phi^{(n-1)}_\omega}
+  \color{Orange}{\mathbb{S}^{(n-1)}_\omega}
 \end{alignat*}
 $$
 `
 
-- \\(N\\)-the order response equations
+**\\(N\\)-the order response equations**
 `
 $$
 \bbox[SkyBlue, 5pt]{\left[\mathbf{E}^{[2]} - \omega_{b_N}\mathbf{S}^{[2]} \right]
@@ -1327,8 +1328,8 @@ layout: false
 
 **Extensible, modular, sustainable development**
 - Develop once, reuse anywhere
-- Facile access to new PCM features
-- Free and open-source
+- _Free_, _open-source_, _facile_ access to new PCM features
+- **Unique package** in current QM software ecosystem
 ]
 
 ???
