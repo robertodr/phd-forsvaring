@@ -1090,12 +1090,23 @@ layout: false
 
 ---
 layout: false
+class: split-50-50
 
 ## Effect of Interface Curvature
 
 `$$\Delta G_{R_0}(z) = G_{R_0}(z+R_0) - G_{R_0=80} (z+80)$$`
 
 ### Interface effect determined by \\(G_\mathrm{img}\\)
+
+.column[
+- \\(G_\mathrm{img}\\) **medium-long range**
+- interface effect **before** crossing
+]
+
+.column[
+- \\(G_\mathrm{img}\\) **short range**
+- interface effect **after** crossing
+]
 
 <p style="text-align:center;"><img src="images/Li-curvature.png" style="width: 100%"></p>
 <p style="clear: both;">
