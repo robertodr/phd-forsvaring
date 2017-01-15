@@ -802,7 +802,6 @@ layout: false
 
 ## PTED-CC
 
-<div class="imageWrapper">
 `
 $$
 \begin{align}
@@ -818,12 +817,8 @@ $$
 \end{align}
 $$
 `
-<p style="text-align:center;"><img src="images/pted-cc.png" style="width: 100%"></p>
+<img src="images/pted-cc.png" style="float: center; width: 100%; margin-right: 1%; margin-top: 2.5em;">
 <p style="clear: both;">
-
---
-  <img class="overlayImage" src="images/barking-wrong-tree.gif" style="width: 100%" align="center">
-</div>
 
 ???
 
@@ -831,6 +826,17 @@ $$
 - Approximate quantum/classical coupling schemes
 - MBPT expansion: 2n+1 and 2n+2 rules
 - Approximate CC methods
+
+---
+layout: false
+
+## Barking Up The Wrong Tree?
+
+<img src="images/barking-wrong-tree.gif" style="float: center; width: 100%; margin-right: 1%; margin-top: -1em;">
+<p style="clear: both;">
+
+<img src="images/pted-cc.png" style="float: center; width: 100%; margin-right: 1%; margin-top: -1em;">
+<p style="clear: both;">
 
 ---
 layout: false
@@ -882,16 +888,10 @@ layout: false
 <p style="clear: both;">
 
 `$$
-\mathbf{F} = \begin{
-  pmatrix}
-\mathbf{F}^{LL, \mathrm{vac}} + \mathbf{
-  q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{
-  LS, \mathrm { vac }} \\
-\mathbf{F}^{SL, \mathrm{vac}} & \mathbf{F}^{SS, \mathrm{vac}} + \mathbf{
-  q}\cdot\mathbf{v}^{
-  SS}
-\end{
-  pmatrix}
+\mathbf{F} = \begin{pmatrix}
+\mathbf{F}^{LL, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{LL} & \mathbf{F}^{LS, \mathrm { vac }} \\
+\mathbf{F}^{SL, \mathrm{vac}} & \mathbf{F}^{SS, \mathrm{vac}} + \mathbf{q}\cdot\mathbf{v}^{SS}
+\end{pmatrix}
 $$`
 
 ???
@@ -903,10 +903,10 @@ layout: false
 
 ## Solvation in the Relativistic Regime
 
-<p style="text-align:center;"><img src="images/paper-i.png" style="width: 80%"></p>
+<p style="text-align:center;"><img src="images/paper-i.png" style="width: 90%"></p>
 <p style="clear: both;">
 
-<p style="text-align:center;"><img src="images/rela-mep.png" style="width: 90%"></p>
+<p style="text-align:center;"><img src="images/rela-mep.png" style="width: 80%"></p>
 <p style="clear: both;">
 
 ???
@@ -919,80 +919,45 @@ layout: false
 
 ## Relativity and Solvation: EPR and pNMR parameters
 
-<p style="text-align:center;"><img src="images/paper-iv.png" style="width: 100%"></p>
+<p style="text-align:left;"><img src="images/paper-iv.png" style="width: 110%"></p>
 <p style="clear: both;">
 
 `$$
-\begin{
-  align}
-g_{uv}   = \frac{2c} {
-  \langle \tilde { S }
-  _v \rangle} \,
-           \mathrm{
-  Tr} \left\{
-           \mathbf{\Lambda}_{B_u} \mathbf{D}^{
-  (J_v)}
-                       \right\},
+\begin{align}
+g_{uv}   = \frac{2c} {\langle \tilde{S}_v \rangle} \, \mathrm{ Tr} \left\{\mathbf{\Lambda}_{B_u} \mathbf{D}^{ (J_v)} \right\},
 \quad&\quad
-  \left(\mathbf{
-  \Lambda}_{
-  B_u}\right)_{\lambda\tau} = \frac{1}{
-  2}
+  \left(\mathbf{\Lambda}_{B_u}\right)_{\lambda\tau} = \frac{1}{2}
   \left\langle
-       \mathbf{
-  X}_\lambda
+       \mathbf{X}_\lambda |
+       \left( \mathbf{r}_{G} \times \mathbf{\alpha} \right)_u
        |
-       \left( \mathbf{
-  r}_{
-  G} \times \mathbf{
-  \alpha} \right)_u
-       |
-       \mathbf{
-  X}_\tau
+       \mathbf{X}_\tau
   \right\rangle.
 \\
-A^M_{uv} = \frac{1} {
-  \langle \tilde { S }
-  _v \rangle} \,
-           \mathrm{
-  Tr} \left\{
-           \mathbf{\Lambda}_{I^M_u} \mathbf{D}^{
-  (J_v)}
-                       \right\},
+A^M_{uv} = \frac{1} {\langle \tilde{S}_v \rangle} \,
+           \mathrm{Tr} \left\{\mathbf{\Lambda}_{I^M_u} \mathbf{D}^{(J_v)}\right\},
 \quad&\quad
-\left(\mathbf{\Lambda}^{
-  \mathrm { PN }}_{
-  I ^ M_u}\right)_{\lambda\tau}
+\left(\mathbf{\Lambda}^{\mathrm{PN}}_{I^M_u}\right)_{\lambda\tau}
     = \gamma^M
-    \left\langle
-       \mathbf{
-  X}_\lambda
+    \left\langle\mathbf{X}_\lambda
        \left|
           \left(
-          \frac{\mathbf{r}_{M} \times \mathbf{\alpha}}{
-  r ^ { 3 } _ { M }}
+          \frac{\mathbf{r}_{M} \times \mathbf{\alpha}}{r^{3}_{M}}
           \right)_u
        \right|
-       \mathbf{
-  X}_\tau
+       \mathbf{X}_\tau
     \right\rangle
 \\
 \delta_M^\mathrm{para} &= \frac{\mu_e}{
-  12\gamma ^ MkT} \,
-                        \text{
-  Tr} \left( \mathbf{
-  g}\mathbf{A}^\mathrm{
-  T}_M \right)
-\end{
-  align}
+  12\gamma^MkT} \,\text{Tr} \left( \mathbf{g}\mathbf{A}^\mathrm{T}_M \right)
+\end{align}
 $$`
-
-- Expectation values
-- Particularly sensitive to the environment
 
 ???
 
 - We want properties
+- Expectation values
+- Particularly sensitive to the environment
 
 ---
 layout: false
@@ -1041,24 +1006,18 @@ $$
 
 `
 $$
-  G(\mathbf{r}, \mathbf{r}^\prime) =\frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)} + G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
+  G(\mathbf{r}, \mathbf{r}^\prime) =\frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)|\mathbf{r}-\mathbf{r}^\prime|} + G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
   =
-  \begin{
-  cases}
-    \sum_{\ell=0}^\infty
-    \frac{-(2\ell+1)}{
-  r ^ { \prime 2 }\varepsilon(r ^\prime)}
-    \frac{u_\ell(r)v_\ell(r^\prime)}{
-  W_\ell(r ^\prime)}
+  \begin{cases}
+    \sum\limits_{\ell=1}^\infty
+    \frac{-(2\ell+1)}{r^{\prime 2}\varepsilon(r^\prime)}
+    \color{Orange}{\frac{u_\ell(r)v_\ell(r^\prime)}{W_\ell(r ^\prime)}}
     P_\ell(\cos\gamma),\,\text{for}\,\, r<r^\prime \\
-   \sum_{\ell=0}^\infty
-   \frac{-(2\ell+1)}{
-  r ^ { \prime 2 }\varepsilon(r ^\prime)}
-   \frac{u_\ell(r^\prime)v_\ell(r)}{
-  W_\ell(r ^\prime)}
+   \sum\limits_{\ell=1}^\infty
+   \frac{-(2\ell+1)}{r^{\prime 2}\varepsilon(r^\prime)}
+   \color{Orange}{\frac{u_\ell(r^\prime)v_\ell(r)}{W_\ell(r ^\prime)}}
     P_\ell(\cos\gamma),\,\text{for}\,\, r>r^\prime
-  \end{
-  cases}
+  \end{cases}
 $$
 `
 
@@ -1095,20 +1054,12 @@ layout: false
 
 ## Effect of interface width: acetone
 
-- Wider profile, smoother transition
-- Interface effect delayed (Onsager factor)
-- Orientation matters
-
 <img src="images/acetone-par-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 <img src="images/acetone-perp-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 <p style="clear: both;">
 <img src="images/acetone_tangent.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 <img src="images/acetone_normal.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 <p style="clear: both;">
-
-<font color="red">
-<center>Two figures missing here</center>
-</font>
 
 ???
 
@@ -1118,9 +1069,13 @@ layout: false
 - `\(R_0 = 20~\AA\)`
 - Figures report user-defined values of `\(\tilde{
   w}\)`
-- When the dipole moment is normal to the droplet, different parts of the molecule
-experience different dielectric environments. Of course, the interface size
-has to be quite small!
+- When the dipole moment is normal to the droplet, different parts of the
+  molecule experience different dielectric environments. Of course, the
+  interface size has to be quite small!
+- Wider profile, smoother transition
+- Interface effect delayed (Onsager factor)
+- Orientation matters
+
 
 ---
 layout: false
@@ -1227,9 +1182,9 @@ layout: false
 ## Arbitrary Order Molecular Response Properties in Solution
 
 <div class="imageWrapper">
-  <img class="overlayImage" src="images/pcm_openrsp.svg" style="width: 90%" align="middle">
+  <img class="overlayImage" src="images/pcm_openrsp.png" style="width: 90%" align="middle">
 --
-  <img class="overlayImage" src="images/paper-v.png" style="width: 90%" align="middle">
+  <img class="overlayImage" src="images/paper-v.png" style="width: 110%" align="left">
 </div>
 
 ---
@@ -1364,6 +1319,8 @@ layout: false
 - Luca Frediani (CTCC, University of Tromsø)
 - Benedetta Mennucci (Università di Pisa)
 - Radovan Bast (University of Tromsø)
+- Glenn Morello (CTCC, University of Tromsø)
+- Michal Repisky (CTCC, University of Tromsø)
 - Filippo Lipparini (University of Mainz)
 - T. Daniel Crawford (Virginia Tech)
 - Lori A. Burns (Georgia Tech)
