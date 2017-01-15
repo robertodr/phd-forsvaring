@@ -687,25 +687,25 @@ layout: false
 - Highly cohesive
 
 ```Fortran
-! Initializating PCMSolver
-! ------------------------
+! Initialize PCMSolver
+! --------------------
 ! 1. Generate cavity and BEM solver
-pcm_context = pcmsolver_new(PCMSOLVER_READER_OWN,           &
-                            nr_nuclei, charges, coordinates, &
-                            symmetry_info, host_input)
-! 2. Get cavity collocation points, needed to compute MEP
-call pcmsolver_get_centers(pcm_context, grid)
+pcm_context = pcmsolver_new(...)
+! 2. Get cavity points, needed to compute MEP
+call pcmsolver_get_centers(pcm_context, ...)
 
 ! SCF Cycle
 ! ---------
 ! 1. Set surface function with MEP@cavity
-call pcmsolver_set_surface_function(pcm_context, grid_size, mep, mep_lbl)
+call pcmsolver_set_surface_function(pcm_context, ...)
 ! 2. Compute ASC given the MEP
-call pcmsolver_compute_asc(pcm_context, mep_lbl, asc_lbl, irrep)
+call pcmsolver_compute_asc(pcm_context, ...)
 ! 3. Get values of ASC@cavity from surface function
-call pcmsolver_get_surface_function(pcm_context, grid_size, asc, asc_lbl)
+call pcmsolver_get_surface_function(pcm_context, ...)
 ! 4. Compute polarization energy from MEP/ASC pair
-energy = pcmsolver_compute_polarization_energy(pcm_context, mep_lbl, asc_lbl)
+energy = pcmsolver_compute_polarization_energy(pcm_context, ...)
+! Clean up API context
+call pcmsolver_delete(pcm_context)
 ```
 
 ???
