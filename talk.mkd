@@ -302,26 +302,26 @@ $$`
 
 - Define the .red[reaction potential]
 `$$
- u(\mathbf{r}) = \color{blue}{\varphi(\mathbf{r})} + \color{red}{\xi(\mathbf{r})}
- = \int_C \mathop{}\!\mathrm{d}\mathbf{r}^\prime \frac{\color{blue}{\rho(\mathbf{r}^\prime)}}{|\mathbf{r} - \mathbf{r}^\prime|} +
-  \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \frac{\color{red}{\sigma(\mathbf{s})}}{|\mathbf{r} - \mathbf{s}|}
+ u(\mathbf{r}) = \color{Blue}{\varphi(\mathbf{r})} + \color{Red}{\xi(\mathbf{r})}
+ = \int_C \mathop{}\!\mathrm{d}\mathbf{r}^\prime \frac{\color{Blue}{\rho(\mathbf{r}^\prime)}}{|\mathbf{r} - \mathbf{r}^\prime|} +
+  \int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \frac{\color{Red}{\sigma(\mathbf{s})}}{|\mathbf{r} - \mathbf{s}|}
 $$`
 
 - .red[Apparent surface charge (ASC)]
 `$$
-\color{green}{\mathcal{T}}\color{red}{\sigma(\mathbf{s})} = -\color{green}{\mathcal{R}}\color{blue}{\varphi(\mathbf{s})}
+\color{Green}{\mathcal{T}}\color{Red}{\sigma(\mathbf{s})} = -\color{Green}{\mathcal{R}}\color{Blue}{\varphi(\mathbf{s})}
 $$`
 
 - Green's functions for \\(L_\star\\) define integral operators
 
 `$$
  \begin{align}
-  (\color{green}{\mathcal{S}_\star} f)(\mathbf{s}) &=
-\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime \color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}f(\mathbf{s}^\prime) \\
-  (\color{green}{\mathcal{D}_\star} f)(\mathbf{s}) &=
-\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}^\prime\color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime) \\
-  (\color{green}{\mathcal{D}^\dagger_\star} f)(\mathbf{s}) &=
-\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}\color{green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime)
+  (\color{Green}{\mathcal{S}_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime \color{Green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}f(\mathbf{s}^\prime) \\
+  (\color{Green}{\mathcal{D}_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}^\prime\color{Green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime) \\
+  (\color{Green}{\mathcal{D}^\dagger_\star} f)(\mathbf{s}) &=
+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s}^\prime [\partial_{L_\star}\color{Green}{G_\star(\mathbf{s}, \mathbf{s}^\prime)}]f(\mathbf{s}^\prime)
  \end{align}
 $$`
 
@@ -343,21 +343,21 @@ $$`
 - Environments with anisotropies and nonuniformities
 `$$
 \begin{align}
-\left[\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{e}}\right)\color{green}{\mathcal{S}_\mathrm{i}} +
-      \color{green}{\mathcal{S}_\mathrm{e}}\left(2\pi\mathcal{I} + \color{green}{\mathcal{D}^\dagger_\mathrm{i}}\right) \right]&\color{red}{\sigma(\mathbf{s})} = \\
-&-\left[\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{e}}\right) -
-\color{green}{\mathcal{S}_\mathrm{e}}\color{green}{\mathcal{S}_\mathcal{i}^{-1}}\left(2\pi\mathcal{I} - \color{green}{\mathcal{D}_\mathrm{i}}\right)\right]\color{blue}{\varphi(\mathbf{s})}
+\left[\left(2\pi\mathcal{I} - \color{Green}{\mathcal{D}_\mathrm{e}}\right)\color{Green}{\mathcal{S}_\mathrm{i}} +
+      \color{Green}{\mathcal{S}_\mathrm{e}}\left(2\pi\mathcal{I} + \color{Green}{\mathcal{D}^\dagger_\mathrm{i}}\right) \right]&\color{Red}{\sigma(\mathbf{s})} = \\
+&-\left[\left(2\pi\mathcal{I} - \color{Green}{\mathcal{D}_\mathrm{e}}\right) -
+\color{Green}{\mathcal{S}_\mathrm{e}}\color{Green}{\mathcal{S}_\mathcal{i}^{-1}}\left(2\pi\mathcal{I} - \color{Green}{\mathcal{D}_\mathrm{i}}\right)\right]\color{Blue}{\varphi(\mathbf{s})}
 \end{align}
 $$`
 - Isotropic environments
 `$$
-\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right)\mathcal{I} - \color{green}{\mathcal{D}}\right]
-\color{green}{\mathcal{S}}\color{red}{\sigma(\mathbf{s})} = -\left( 2\pi\mathcal{I} - \color{green}{\mathcal{D}} \right)
-\color{blue}{\varphi(\mathbf{s})}
+\left[ 2\pi \left(\frac{\varepsilon+1}{\varepsilon-1}\right)\mathcal{I} - \color{Green}{\mathcal{D}}\right]
+\color{Green}{\mathcal{S}}\color{Red}{\sigma(\mathbf{s})} = -\left( 2\pi\mathcal{I} - \color{Green}{\mathcal{D}} \right)
+\color{Blue}{\varphi(\mathbf{s})}
 $$`
 - Conductor-like boundary conditions
 `$$
-\color{green}{\mathcal{S}}\color{red}{\sigma(\mathbf{s})} = -f(\varepsilon)\color{blue}{\varphi(\mathbf{s})}$$`
+\color{Green}{\mathcal{S}}\color{Red}{\sigma(\mathbf{s})} = -f(\varepsilon)\color{Blue}{\varphi(\mathbf{s})}$$`
 
 <font color="red">
 <center>How to solve these? <img src="images/fearful.svg" style="width: 5%"></center>
@@ -381,7 +381,7 @@ Solution by a boundary element method (BEM) <img src="images/smiley.svg" style="
 * \\(N_\mathrm{ts}\\) finite elements on the cavity boundary
 * Form boundary integral operators
 `$$
- \color{green}{\mathbf{T}}\color{red}{\mathbf{q}} = - \color{green}{\mathbf{R}}\color{blue}{\mathbf{v}}
+ \color{Green}{\mathbf{T}}\color{Red}{\mathbf{q}} = - \color{Green}{\mathbf{R}}\color{Blue}{\mathbf{v}}
 $$`
 * Solve linear system
 ]
@@ -405,16 +405,16 @@ layout: false
 
 ## Variational Formulation of the PCM.red[<sup>5</sup>]
 
-Find \\(\color{red}{\sigma(\mathbf{s})}\\) minimizing
+Find \\(\color{Red}{\sigma(\mathbf{s})}\\) minimizing
 `$$
-U_\mathrm{PCM}[\color{red}{\sigma(\mathbf{s})}]
-=\frac{1}{2}\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{red}{\sigma(\mathbf{s})} \color{green}{[\mathcal{R}^{-1}\mathcal{T}]} \color{red}{\sigma(\mathbf{s})}
-+\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{blue}{\varphi(\mathbf{s})}\color{red}{\sigma(\mathbf{s})}
+U_\mathrm{PCM}[\color{Red}{\sigma(\mathbf{s})}]
+=\frac{1}{2}\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{Red}{\sigma(\mathbf{s})} \color{Green}{[\mathcal{R}^{-1}\mathcal{T}]} \color{Red}{\sigma(\mathbf{s})}
++\int_{\partial C} \mathop{}\!\mathrm{d}\mathbf{s} \color{Blue}{\varphi(\mathbf{s})}\color{Red}{\sigma(\mathbf{s})}
 $$`
 
 1. Physically meaningful
-   - Unfavourable self-interaction of \\(\color{red}{\sigma(\mathbf{s})}\\)
-   - Favourable interaction of \\(\color{red}{\sigma(\mathbf{s})}\\) and  \\(\color{blue}{\varphi(\mathbf{s})}\\)
+   - Unfavourable self-interaction of \\(\color{Red}{\sigma(\mathbf{s})}\\)
+   - Favourable interaction of \\(\color{Red}{\sigma(\mathbf{s})}\\) and  \\(\color{Blue}{\varphi(\mathbf{s})}\\)
 
 2. Equilibrium values are energies
 3. Convexity
@@ -462,19 +462,19 @@ layout: false
 
 * .blue[Molecular electrostatic potential (MEP)]
   `$$
-  \varphi(\mathbf{s}) = \sum_{\kappa\lambda}^{N_\mathrm{AO}} \color{blue}{\varphi_{\kappa\lambda}(\mathbf{s})} D_{\lambda\kappa},
+  \varphi(\mathbf{s}) = \sum_{\kappa\lambda}^{N_\mathrm{AO}} \color{Blue}{\varphi_{\kappa\lambda}(\mathbf{s})} D_{\lambda\kappa},
   \quad
-  \color{blue}{\varphi_{\kappa\lambda}(\mathbf{s}) }= \int\mathop{}\!\mathrm{d}\mathbf{r} \frac{-\chi^*_\kappa(\mathbf{r})\chi_\lambda(\mathbf{r}) }{|\mathbf{r} - \mathbf{s}|}
+  \color{Blue}{\varphi_{\kappa\lambda}(\mathbf{s}) }= \int\mathop{}\!\mathrm{d}\mathbf{r} \frac{-\chi^*_\kappa(\mathbf{r})\chi_\lambda(\mathbf{r}) }{|\mathbf{r} - \mathbf{s}|}
   $$`
 * .red[Apparent surface charge (ASC)]
   `$$
-   \color{green}{\mathcal{T}}\color{red}{\sigma(\mathbf{s})} = - \color{green}{\mathcal{R}}\color{blue}{\varphi(\mathbf{s})}
+   \color{Green}{\mathcal{T}}\color{Red}{\sigma(\mathbf{s})} = - \color{Green}{\mathcal{R}}\color{Blue}{\varphi(\mathbf{s})}
   $$`
 * Fock matrix
   `$$
    f_{\kappa\lambda} =
    f^\mathrm{vac}_{\kappa\lambda} +
-    (\color{red}{\sigma(\mathbf{s})}, \color{blue}{\varphi_{\kappa\lambda}(\mathbf{s})})_{
+    (\color{Red}{\sigma(\mathbf{s})}, \color{Blue}{\varphi_{\kappa\lambda}(\mathbf{s})})_{
   \partial C}
   $$`
 
@@ -497,19 +497,29 @@ applications._
 .footnote-cite[Source: Wikipedia [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)]
 
 ---
+class: split-50-50
 
 ## How to API Like a Pro
 
-* __Encapsulation__ decide what others should know
-* __Development history__ know your past
-* __Documentation__ let others know what you can do
-* __Versioning__ what changed?
-* __Testing__ did you mess up?
-<p style="text-align:center;"><img src="images/stranger-in-the-alps-twice.gif" style="width: 45%;"/></p>
-<p style="clear: both;">
-* __Building__ can it stand on its own feet?
-* __Deploying__ get it out in the open!
+.column[
+__Encapsulation__ Decide what others should know
 
+__Development history__ Know your past
+
+__Documentation__ Let others know what you can do
+]
+.column[
+__Versioning__ What changed?
+
+__Testing__ Did you mess up?
+
+__Building__ Can it stand on its own feet?
+
+__Deploying__ Get it out in the open!
+]
+
+<p style="text-align:center;"><img src="images/stranger-in-the-alps-twice.gif" style="width: 80%;"/></p>
+<p style="clear: both;">
 
 ???
 
@@ -779,12 +789,12 @@ $$
 `
 $$
 \begin{align}
-\mathcal{L}_\mathrm{eff}(\color{blue}{t}, \color{green}{\bar{t}}, \color{red}{\mathbf{p}})_\mathcal{M} =
-\langle\mathrm{HF} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
-  &+\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | \color{blue}{\overline{H}} | \mathrm{HF}\rangle
+\mathcal{L}_\mathrm{eff}(\color{Blue}{t}, \color{Green}{\bar{t}}, \color{Red}{\mathbf{p}})_\mathcal{M} =
+\langle\mathrm{HF} | \color{Blue}{\overline{H}} | \mathrm{HF}\rangle
+  &+\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | \color{Blue}{\overline{H}} | \mathrm{HF}\rangle
   +U_\mathrm{pol}^\mathrm{ref} \\
-+\frac{1}{2}\color{red}{\mathrm{p}}\mathbb{V}\color{red}{\mathrm{p}} &+
-\color{red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{blue}{t},\color{green}{\bar{t}})_\mathcal{M}
++\frac{1}{2}\color{Red}{\mathrm{p}}\mathbb{V}\color{Red}{\mathrm{p}} &+
+\color{Red}{\mathrm{p}}\mathrm{s}_{\mathrm{N}}(\color{Blue}{t},\color{Green}{\bar{t}})_\mathcal{M}
 \end{align}
 $$
 `
@@ -803,15 +813,15 @@ layout: false
 `
 $$
 \begin{align}
- &\epsilon_{\mu_q}\color{blue}{t_{\mu_q}} +\langle\mu_q | \color{blue}{\overline{\Phi}} | \mathrm{HF}\rangle
- +\color{red}{\mathrm{p}}\langle\mu_q | \color{blue}{\overline{\mathrm{s}}} | \mathrm{HF}\rangle = 0 \\
- &\epsilon_{\mu_q}\color{green}{\bar{t}_{\mu_q}}
-  +\langle\mathrm{HF} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\color{blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
-  &+\color{red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
-  +\sum_{u=1}^{\mathcal{M}}\langle\color{green}{\bar{t}_{u}} | [[\mathrm{s}, \color{blue}{T}], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
-  &\mathbb{V}\color{red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{blue}{t}, \color{green}{\bar{t}})_\mathcal{M} = 0
+ &\epsilon_{\mu_q}\color{Blue}{t_{\mu_q}} +\langle\mu_q | \color{Blue}{\overline{\Phi}} | \mathrm{HF}\rangle
+ +\color{Red}{\mathrm{p}}\langle\mu_q | \color{Blue}{\overline{\mathrm{s}}} | \mathrm{HF}\rangle = 0 \\
+ &\epsilon_{\mu_q}\color{Green}{\bar{t}_{\mu_q}}
+  +\langle\mathrm{HF} | [\color{Blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | [\color{Blue}{\overline{\Phi}}, \tau_{\mu_q}] | \mathrm{HF}\rangle \\
+  &+\color{Red}{\mathrm{p}}\Big(\langle\mathrm{HF} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle\delta_{\mu_q\mu_1}
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | [\mathrm{s}, \tau_{\mu_q}] | \mathrm{HF}\rangle
+  +\sum_{u=1}^{\mathcal{M}}\langle\color{Green}{\bar{t}_{u}} | [[\mathrm{s}, \color{Blue}{T}], \tau_{\mu_q}] | \mathrm{HF}\rangle\Big) = 0 \\
+  &\mathbb{V}\color{Red}{\mathrm{p}} + \mathrm{s}_{\mathrm{N}}(\color{Blue}{t}, \color{Green}{\bar{t}})_\mathcal{M} = 0
 \end{align}
 $$
 `
@@ -853,8 +863,8 @@ layout: false
 `
 $$
   G_{\Lambda(\text{T})}
-  =\sum_{u=1}^2\langle\color{green}{\bar{t}_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
-    +\color{red}{\mathrm{p}^{*}}\langle\color{green}{\bar{t}_{2}^{*}} | [\mathrm{s}, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
+  =\sum_{u=1}^2\langle\color{Green}{\bar{t}_{u}^{*}}| [\Phi, \color{Blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +\color{Red}{\mathrm{p}^{*}}\langle\color{Green}{\bar{t}_{2}^{*}} | [\mathrm{s}, \color{Blue}{T_3^{*}}] | \mathrm{HF}\rangle
 $$
 `
 #### PTED-CCSD(T)
@@ -862,10 +872,10 @@ $$
 `
 $$
   G_{(\text{T})}
-  =\sum_{u=1}^2\langle\color{blue}{t_{u}^{*}}| [\Phi, \color{blue}{T_3^{*}}] | \mathrm{HF}\rangle
-    +\color{red}{
-  \mathrm{p} ^ { * }}\langle\color{blue}{t_{2}^{
-  *}} | [\mathrm{s}, \color{blue}{T_3^{
+  =\sum_{u=1}^2\langle\color{Blue}{t_{u}^{*}}| [\Phi, \color{Blue}{T_3^{*}}] | \mathrm{HF}\rangle
+    +\color{Red}{
+  \mathrm{p} ^ { * }}\langle\color{Blue}{t_{2}^{
+  *}} | [\mathrm{s}, \color{Blue}{T_3^{
   *}}] | \mathrm{
   HF}\rangle
 $$
@@ -1192,22 +1202,22 @@ layout: false
 
 `
 $$
- \tilde{L}^a(\tilde{\mathbf{D}}, \color{red}{\tilde{\sigma}}, t)
+ \tilde{L}^a(\tilde{\mathbf{D}}, \color{Red}{\tilde{\sigma}}, t)
  \overset{\lbrace\text{Tr}\rbrace_T}{=}
- \color{green}{\tilde{\mathcal{G}}^{00,a}} - \tilde{\mathbf{S}}^a\tilde{\mathbf{W}}
+ \color{Green}{\tilde{\mathcal{G}}^{00,a}} - \tilde{\mathbf{S}}^a\tilde{\mathbf{W}}
 $$
 `
 
 - Fixed cavity approximation
 `
 $$
-\color{green}{\tilde{\mathcal{G}}^{00,a}}(\tilde{\mathbf{D}}, \color{red}{\tilde{\sigma}}, t)
+\color{Green}{\tilde{\mathcal{G}}^{00,a}}(\tilde{\mathbf{D}}, \color{Red}{\tilde{\sigma}}, t)
 \overset{\text{Tr}}{=}
 (\tilde{\mathbf{h}}^a + \tilde{\mathbf{V}}^{t,a} +
 \frac{1}{2}\tilde{\mathbf{G}}^{\gamma, a}(\tilde{\mathbf{D}}) +
 \tilde{\mathbf{F}}^{\Omega_a}_\mathrm{xc}
 -\frac{\mathrm{i}}{2}\tilde{\mathbf{T}}^a)\tilde{\mathbf{D}} + h_\mathrm{nuc}^a
-+\color{red}{\tilde{\sigma}\tilde{\mathbf{\varphi}}^a\tilde{\mathbf{D}}}
++\color{Red}{\tilde{\sigma}\tilde{\mathbf{\varphi}}^a\tilde{\mathbf{D}}}
 $$
 `
 
@@ -1217,9 +1227,9 @@ $$
 \langle\langle A; B \rangle\rangle_{\omega_b} =
     L^{ab}
  \overset{\lbrace\text{Tr}\rbrace_T}{=}
-\color{green}{\mathcal{G}^{00,ab}}
-+\mathcal{G}^{10,a}\color{blue}{\mathbf{D}^{b}}
-+\mathcal{G}^{01,a}\color{red}{\sigma^{b}}
+\color{Green}{\mathcal{G}^{00,ab}}
++\mathcal{G}^{10,a}\color{Blue}{\mathbf{D}^{b}}
++\mathcal{G}^{01,a}\color{Red}{\sigma^{b}}
 -\mathbf{S}^{ab}\mathbf{W} - \mathbf{S}^{a}\mathbf{W}^{b}
 $$
 `
@@ -1228,12 +1238,12 @@ $$
 `
 $$
 \begin{alignat*}{2}
-  \mathcal{R}^{-1}\mathcal{T}\color{blue}{\sigma_\mathrm{H}^{b_N}}
-  +\text{Tr}\mathbf{\varphi}\color{blue}{\mathbf{D}_\mathrm{H}^{b_N}} = 0
+  \mathcal{R}^{-1}\mathcal{T}\color{Blue}{\sigma_\mathrm{H}^{b_N}}
+  +\text{Tr}\mathbf{\varphi}\color{Blue}{\mathbf{D}_\mathrm{H}^{b_N}} = 0
   \quad&\quad
-  \mathcal{R}^{-1}\mathcal{T}\color{orange}{\sigma_\mathrm{P}^{b_N}}
-  +\text{Tr}\mathbf{\varphi}\color{orange}{\mathbf{D}_\mathrm{P}^{b_N}} =
-  \color{orange}{\Phi^{(n-1)}_\omega}
+  \mathcal{R}^{-1}\mathcal{T}\color{Orange}{\sigma_\mathrm{P}^{b_N}}
+  +\text{Tr}\mathbf{\varphi}\color{Orange}{\mathbf{D}_\mathrm{P}^{b_N}} =
+  \color{Orange}{\Phi^{(n-1)}_\omega}
 \end{alignat*}
 $$
 `
@@ -1306,22 +1316,32 @@ layout: false
 ]
 
 ---
-
 layout: false
+class: split-50-50
 
-## Acknowldegements
+## Acknowledgements
 
-<p style="text-align:center;"><img src="images/acknowledgements-once.gif" style="width: 50%"></p>
+<p style="text-align:center;"><img src="images/acknowledgements.gif" style="width: 70%"></p>
 <p style="clear: both;">
 
-- Luca Frediani (CTCC, University of Tromsø)
-- Benedetta Mennucci (Università di Pisa)
-- Radovan Bast (University of Tromsø)
-- Glenn Morello (CTCC, University of Tromsø)
-- Michal Repisky (CTCC, University of Tromsø)
-- Filippo Lipparini (University of Mainz)
-- T. Daniel Crawford (Virginia Tech)
-- Lori A. Burns (Georgia Tech)
+.column[
+__Benedetta Mennucci__ .cite[Università di Pisa]
+
+__Radovan Bast__ .cite[University of Tromsø]
+
+__Glenn Morello__ .cite[CTCC, University of Tromsø]
+
+__Michal Repisky__ .cite[CTCC, University of Tromsø]
+]
+.column[
+__Luca Frediani__ .cite[CTCC, University of Tromsø]
+
+__Filippo Lipparini__ .cite[Universität Mainz]
+
+__T. Daniel Crawford__ .cite[Virginia Tech]
+
+__Lori A. Burns__ .cite[Georgia Tech]
+]
 
 ---
 name: last-page
