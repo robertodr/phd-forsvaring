@@ -419,7 +419,7 @@ $$`
 2. Equilibrium values are energies
 3. Convexity
 
-.footnote-cite[.red[<sup>5</sup>] Lipparini, F. _et al._ _J. Chem. Phys._ (2010), __133__, 014106]
+.footnote-cite[.red[<sup>5</sup>] Lipparini, F.; Scalmani, G.; Mennucci, B.; Cancès, E.; Caricato, M.; Frisch, M. J. _J. Chem. Phys._ (2010), __133__, 014106]
 
 ???
 
@@ -441,7 +441,8 @@ $$`
 4. Extended Lagrangian dynamics
 
 
-.footnote-cite[.red[<sup>6</sup>] Lipparini, F. _et al._ _J. Chem. Theory Comput._ (2015), __11__, 623]
+.footnote-cite[.red[<sup>6</sup>] Lipparini, F.; Lagardère, L.; Raynaud, C.; Stamm, B.; Cancès, E.; Mennucci, B.; Schnieders, M.; Ren, P.; Maday, Y.; Piquemal, J.-P.
+_J. Chem. Theory Comput._ (2015), __11__, 623]
 
 ???
 
@@ -556,7 +557,7 @@ __Deploying__ Get it out in the open!
 
 ## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
-- Open-source [LGPLv3](https://www.gnu.org/copyleft/lesser.html)-licensed
+- **Free and open-source** [LGPLv3](https://www.gnu.org/copyleft/lesser.html)-licensed
 - Developed on [GitHub](https://github.com/PCMSolver/pcmsolver)
 - C++ (~5000 LOC) and Fortran (~3000 LOC)
 
@@ -588,8 +589,8 @@ __Deploying__ Get it out in the open!
 - Capabilities
   * Traditional collocation solvers
   * Isotropic and anisotropic Green's functions
-  * Wavelet solvers _in progress_
-  * Real-time solvers _in progress_
+  * Wavelet solvers (_unreleased_)
+  * Real-time solvers (_in progress_)
 
 - Build system
   * [CMake](https://cmake.org/) _via_ [Autocmake](http://autocmake.readthedocs.io/en/latest/)
@@ -607,7 +608,7 @@ layout: false
 ## PCMSolver: An API for the PCM.red[<sup>7</sup>]
 
 - Testing
-  * Use [Catch](https://github.com/philsquared/Catch) C++ framework
+  * Unit tests with [Catch](https://github.com/philsquared/Catch) C++ framework
   * The `master` branch has 51 tests
   * _Continuous integration_ (CI) on [Travis](https://travis-ci.org/) and [Magnum](https://magnum-ci.com/)
 
@@ -1003,7 +1004,7 @@ class: split-50-50
 
 ## Green's functions in spherical symmetry
 
-<p style="text-align:center;"><img src="images/spherical_diffuse.jpg" style="width: 50%"></p>
+<p style="text-align:center;"><img src="images/droplet+profiles.png" style="width: 80%"></p>
 <p style="clear: both;">
 
 `
@@ -1014,8 +1015,9 @@ $$
 
 `
 $$
-  G(\mathbf{r}, \mathbf{r}^\prime) =\frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)|\mathbf{r}-\mathbf{r}^\prime|} + G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime)
-  =
+\begin{align}
+  G(\mathbf{r}, \mathbf{r}^\prime) = \frac{1}{C(\mathbf{r}, \mathbf{r}^\prime)|\mathbf{r}-\mathbf{r}^\prime|} &+ G_\mathrm{img}(\mathbf{r}, \mathbf{r}^\prime) \\
+  &=
   \begin{cases}
     \sum\limits_{\ell=1}^\infty
     \frac{-(2\ell+1)}{r^{\prime 2}\varepsilon(r^\prime)}
@@ -1026,6 +1028,7 @@ $$
    \color{Orange}{\frac{u_\ell(r^\prime)v_\ell(r)}{W_\ell(r ^\prime)}}
     P_\ell(\cos\gamma),\,\text{for}\,\, r>r^\prime
   \end{cases}
+\end{align}
 $$
 `
 
@@ -1060,7 +1063,7 @@ terms of the Onsager factor.
 ---
 layout: false
 
-## Effect of interface width: acetone
+## Water-Vapor Transfer: Effect of Interface Width
 
 <img src="images/acetone-par-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 <img src="images/acetone-perp-water_vapor.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
@@ -1088,23 +1091,19 @@ layout: false
 ---
 layout: false
 
-## Effect of interface curvature: lithium ion
+## Effect of Interface Curvature
 
 `$$\Delta G_{R_0}(z) = G_{R_0}(z+R_0) - G_{R_0=80} (z+80)$$`
 
-- No effect on bulk values: Gauss' theorem
-- Water droplet to vapor bulk:
-  * image potential acts at medium-long range
-  * largest effect **before** ion crosses interface
-- Oil droplet to water bulk:
-  * image potential acts at short range
-  * largest effect **after** ion crosses interface
+### Interface effect determined by \\(G_\mathrm{img}\\)
 
-<img src="images/Li-water_vapor-curvature.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="images/Li-oil_water-curvature.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
+<p style="text-align:center;"><img src="images/Li-curvature.png" style="width: 100%"></p>
 <p style="clear: both;">
 
+
 ???
+
+- These plots are for the lithium ion
 
 - all interfaces have `\(\tilde{w} = 5.0~\AA\)`
 - on the x axis is the distance from the droplet center
@@ -1113,10 +1112,15 @@ layout: false
   planar results as the two implementations are different and we don't want to
   introduce implementation bias.
 - First picture: lithium ion, water to vapor transfer
+  * The high dielectric constant of water makes the image potential negligible
+    inside the droplet and dominant outside.
+  * \\(G_\mathrm{img}\\) **medium-long range**
+  * interface effect **before** crossing
+
 - Second picture: lithium ion, oil (`\(\varepsilon = 2\)`) to vapor transfer
-- The high dielectric constant of water makes the image potential negligible
-  inside the droplet and dominant outside.
-- For the oil droplet the converse happens.
+  * For the oil droplet the converse happens.
+  * \\(G_\mathrm{img}\\) **short range**
+  * interface effect **after** crossing
 
 ---
 layout: false
@@ -1313,7 +1317,13 @@ layout: false
 **Extensible, modular, sustainable development**
 - Develop once, reuse anywhere
 - Facile access to new PCM features
+- Free and open-source
 ]
+
+???
+
+- PCMSolver is a unique package in the current landscape of QM-related
+  libraries
 
 ---
 layout: false
